@@ -355,6 +355,346 @@
 
 
   <div class="section-rule">
+        <div class="section-header">
+            <h2>Correspondent On The Record</h2>
+        </div>
+    </div>
+
+    <section id="video-intro" class="fade-in" style="max-width:1200px; margin:0 auto; padding:0 40px 40px; border-bottom:2px solid var(--ink);">
+
+        <div style="
+    position:relative;
+    background:var(--cream);
+    border:3px solid var(--ink);
+    overflow:hidden;
+  ">
+
+            <!-- Halftone dot pattern — visible gray dots -->
+            <div style="
+      position:absolute;
+      inset:0;
+      background-image: radial-gradient(circle, rgba(10,10,10,0.08) 1.5px, transparent 1.5px);
+      background-size: 18px 18px;
+      pointer-events:none;
+      z-index:0;
+    "></div>
+
+            <!-- Diagonal rule lines — visible -->
+            <div style="
+      position:absolute;
+      inset:0;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 28px,
+        rgba(10,10,10,0.04) 28px,
+        rgba(10,10,10,0.04) 29px
+      );
+      pointer-events:none;
+      z-index:0;
+    "></div>
+
+            <!-- Top editorial strip -->
+            <div style="
+      position:relative;
+      z-index:2;
+      background:var(--ink);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:8px 28px;
+      border-bottom:3px solid var(--red);
+    ">
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <circle cx="7" cy="7" r="6" stroke="white" stroke-width="1.5"/>
+          <polygon points="5.5,4.5 10,7 5.5,9.5" fill="white"/>
+        </svg>
+                    <span style="font-family:'Libre Baskerville',serif; font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color:#fff; font-weight:700;">Exclusive Video Dispatch</span>
+                </div>
+                <span style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.6);">Self Introduction · Manan Pathak</span>
+                <div style="display:flex; align-items:center; gap:6px;">
+                    <div style="width:6px; height:6px; background:var(--red); border-radius:50%; animation:blink 1.4s infinite;"></div>
+                    <span style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.6);">On Record</span>
+                </div>
+            </div>
+
+            <!-- Main banner content -->
+            <div style="
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1fr 420px 1fr;
+      gap:0;
+      padding:32px 28px;
+      align-items:center;
+    ">
+
+                <!-- LEFT COLUMN -->
+                <div style="padding-right:28px; border-right:2px solid var(--ink);">
+
+                    <!-- Masthead stamp -->
+                    <div style="
+          display:inline-flex;
+          align-items:center;
+          gap:8px;
+          border:1px solid var(--ink);
+          padding:5px 12px;
+          margin-bottom:20px;
+          background:var(--paper);
+        ">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <rect x="1" y="1" width="10" height="10" stroke="var(--ink)" stroke-width="1"/>
+            <rect x="3" y="3" width="6" height="6" fill="rgba(10,10,10,0.12)"/>
+          </svg>
+                        <span style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink);">The Pathak Press</span>
+                    </div>
+
+                    <!-- Headline -->
+                    <h2 style="
+          font-family:'Playfair Display',serif;
+          font-size:clamp(1.4rem, 2.5vw, 2rem);
+          font-weight:900;
+          color:var(--ink);
+          line-height:1.15;
+          margin-bottom:16px;
+        ">
+                        Meet The<br>
+                        <em style="color:var(--red); font-style:italic;">Developer</em><br> Behind The Code
+                    </h2>
+
+                    <!-- Rule -->
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
+                        <div style="flex:1; height:1px; background:var(--ink);"></div>
+                        <svg width="8" height="8" viewBox="0 0 8 8"><rect x="0" y="0" width="8" height="8" fill="var(--ink)"/></svg>
+                        <div style="flex:1; height:1px; background:var(--ink);"></div>
+                    </div>
+
+                    <!-- Teaser -->
+                    <p style="
+          font-family:'Libre Baskerville',serif;
+          font-size:0.82rem;
+          line-height:1.7;
+          color:var(--gray);
+          font-style:italic;
+          margin-bottom:20px;
+          border-left:3px solid var(--red);
+          padding-left:12px;
+        ">
+                        A candid dispatch from the field — who Manan Pathak is, what drives the work, and where the journey is headed.
+                    </p>
+
+                    <!-- Info lines -->
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+                        <div style="display:flex; align-items:center; gap:10px;">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <circle cx="7" cy="5" r="2.5" stroke="var(--gray)" stroke-width="1.2"/>
+              <path d="M2 12c0-2.76 2.24-5 5-5s5 2.24 5 5" stroke="var(--gray)" stroke-width="1.2" fill="none"/>
+            </svg>
+                            <span style="font-family:'Libre Baskerville',serif; font-size:0.7rem; letter-spacing:0.06em; color:var(--gray);">Manan Pathak · B.Tech CSE (CS1) - 71</span>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:10px;">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M7 1.5C4.5 1.5 2.5 3.5 2.5 6c0 3.5 4.5 7 4.5 7s4.5-3.5 4.5-7c0-2.5-2-4.5-4.5-4.5z" stroke="var(--gray)" stroke-width="1.2" fill="none"/>
+              <circle cx="7" cy="6" r="1.5" fill="var(--gray)"/>
+            </svg>
+                            <span style="font-family:'Libre Baskerville',serif; font-size:0.7rem; letter-spacing:0.06em; color:var(--gray);">Batch · Aug 2023 – Jul 2027</span>
+
+                        </div>
+                        <div style="display:flex; align-items:center; gap:10px;">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <rect x="1.5" y="3" width="11" height="8" rx="1" stroke="var(--gray)" stroke-width="1.2" fill="none"/>
+              <path d="M1.5 5.5l5.5 3.5 5.5-3.5" stroke="var(--gray)" stroke-width="1.2" fill="none"/>
+            </svg>
+                            <span style="font-family:'Libre Baskerville',serif; font-size:0.7rem; letter-spacing:0.06em; color:var(--gray);">Dehradun, Uttarakhand</span>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:10px;">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <circle cx="7" cy="7" r="5.5" stroke="var(--gray)" stroke-width="1.2" fill="none"/>
+              <path d="M7 3v4l2.5 2.5" stroke="var(--gray)" stroke-width="1.2" fill="none"/>
+            </svg>
+                            <span style="font-family:'Libre Baskerville',serif; font-size:0.7rem; letter-spacing:0.06em; color:var(--gray);">mananpathak0052@gmail.com</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CENTER COLUMN — video -->
+                <div style="padding:0 28px; display:flex; flex-direction:column; align-items:center;">
+
+                    <!-- Watch now label -->
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+                        <div style="height:1px; width:40px; background:var(--ink);"></div>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M5 0 L10 5 L5 10 L5 7 L0 7 L0 3 L5 3 Z" fill="var(--ink)"/>
+          </svg>
+                        <span style="font-family:'Libre Baskerville',serif; font-size:0.58rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--ink);">Watch Now</span>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M5 0 L0 5 L5 10 L5 7 L10 7 L10 3 L5 3 Z" fill="var(--ink)"/>
+          </svg>
+                        <div style="height:1px; width:40px; background:var(--ink);"></div>
+                    </div>
+
+                    <!-- Video frame -->
+                    <div id="video-container" style="
+          position:relative;
+          width:100%;
+          border:4px solid var(--ink);
+          box-shadow:6px 6px 0 var(--red);
+          cursor:pointer;
+          overflow:hidden;
+          background:var(--ink);
+        " onclick="playVideo()">
+
+                        <!-- Scanline overlay -->
+                        <div style="position:absolute; inset:0; background:repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.04) 3px, rgba(0,0,0,0.04) 4px); pointer-events:none; z-index:2;"></div>
+
+                        <!-- Cover image -->
+                        <img id="video-cover" src="170775103441.jpg" alt="Click to play Manan Pathak introduction" style="width:100%; display:block; aspect-ratio:16/9; object-fit:cover; object-position:top; filter:brightness(0.65) contrast(1.1) grayscale(0.3); transition:filter 0.3s;"
+                            onmouseover="this.style.filter='brightness(0.5) contrast(1.1) grayscale(0.3)'" onmouseout="this.style.filter='brightness(0.65) contrast(1.1) grayscale(0.3)'" />
+
+                        <!-- Play overlay -->
+                        <div id="play-overlay" style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; z-index:3;">
+                            <div style="
+              width:68px; height:68px;
+              border:2px solid rgba(255,255,255,0.9);
+              border-radius:50%;
+              background:rgba(192,57,43,0.9);
+              display:flex; align-items:center; justify-content:center;
+              transition:transform 0.2s;
+            " onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <polygon points="8,5 20,12 8,19" fill="white"/>
+              </svg>
+                            </div>
+                            <span style="font-family:'Libre Baskerville',serif; font-size:0.62rem; letter-spacing:0.15em; text-transform:uppercase; color:#fff; background:rgba(10,10,10,0.65); padding:3px 12px;">Play Introduction</span>
+                        </div>
+
+                        <!-- Exclusive badge -->
+                        <div style="position:absolute; top:10px; left:10px; background:var(--red); padding:2px 8px; z-index:4;">
+                            <span style="font-family:'Libre Baskerville',serif; font-size:0.52rem; letter-spacing:0.12em; text-transform:uppercase; color:#fff;">Exclusive</span>
+                        </div>
+
+                        <!-- Self intro badge -->
+                        <div style="position:absolute; bottom:10px; right:10px; background:rgba(10,10,10,0.7); padding:2px 8px; border:1px solid rgba(255,255,255,0.2); z-index:4;">
+                            <span style="font-family:'Libre Baskerville',serif; font-size:0.52rem; letter-spacing:0.08em; color:rgba(255,255,255,0.8);">Self Introduction</span>
+                        </div>
+
+                        <!-- Actual video -->
+                        <video id="intro-video" style="position:absolute; inset:0; width:100%; height:100%; display:none; object-fit:cover;" controls>
+            <source src="your-intro-video.mp4" type="video/mp4">
+          </video>
+                    </div>
+
+                    <!-- Caption -->
+                    <p style="
+          font-family:'Libre Baskerville',serif;
+          font-size:0.65rem;
+          font-style:italic;
+          color:var(--light-gray);
+          text-align:center;
+          margin-top:10px;
+          border-top:1px solid var(--ink);
+          padding-top:8px;
+          width:100%;
+        ">
+                        Manan Pathak · Developer & Cybersecurity Specialist · Graphic Era Hill University, 2024
+                    </p>
+                </div>
+
+                <!-- RIGHT COLUMN — Field Kit -->
+                <div style="padding-left:28px; border-left:2px solid var(--ink);">
+
+                    <!-- Label -->
+                    <div style="
+          display:inline-flex;
+          align-items:center;
+          gap:8px;
+          border:1px solid var(--ink);
+          padding:5px 12px;
+          margin-bottom:20px;
+          background:var(--paper);
+        ">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <rect x="2" y="1" width="8" height="10" rx="1" stroke="var(--ink)" stroke-width="1" fill="none"/>
+            <line x1="4" y1="4" x2="8" y2="4" stroke="var(--ink)" stroke-width="0.8"/>
+            <line x1="4" y1="6" x2="8" y2="6" stroke="var(--ink)" stroke-width="0.8"/>
+            <line x1="4" y1="8" x2="6" y2="8" stroke="var(--ink)" stroke-width="0.8"/>
+          </svg>
+                        <span style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink);">Field Kit</span>
+                    </div>
+
+                    <!-- What I build -->
+                    <div style="margin-bottom:16px; padding-bottom:14px; border-bottom:1px solid #ccc;">
+                        <p style="font-family:'Libre Baskerville',serif; font-size:0.58rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); margin-bottom:6px;">What I Build</p>
+                        <p style="font-size:0.82rem; line-height:1.6; color:var(--gray);">Secured REST APIs, auth systems with JWT + RBAC, and production web apps deployed on cloud infrastructure.</p>
+                    </div>
+
+                    <!-- Daily tools -->
+                    <div style="margin-bottom:16px; padding-bottom:14px; border-bottom:1px solid #ccc;">
+                        <p style="font-family:'Libre Baskerville',serif; font-size:0.58rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); margin-bottom:8px;">Daily Tools</p>
+                        <div style="display:flex; flex-wrap:wrap; gap:6px;">
+                            <span style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.06em; text-transform:uppercase; border:1px solid var(--ink); padding:2px 8px; color:var(--ink); background:var(--paper);">Flask</span>
+                            <span style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.06em; text-transform:uppercase; border:1px solid var(--ink); padding:2px 8px; color:var(--ink); background:var(--paper);">MongoDB</span>
+                            <span style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.06em; text-transform:uppercase; border:1px solid var(--ink); padding:2px 8px; color:var(--ink); background:var(--paper);">Postman</span>
+                            <span style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.06em; text-transform:uppercase; border:1px solid var(--ink); padding:2px 8px; color:var(--ink); background:var(--paper);">VS Code</span>
+                            <span style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.06em; text-transform:uppercase; border:1px solid var(--ink); padding:2px 8px; color:var(--ink); background:var(--paper);">Linux CLI</span>
+                            <span style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.06em; text-transform:uppercase; border:1px solid var(--ink); padding:2px 8px; color:var(--ink); background:var(--paper);">Git</span>
+                            <span style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.06em; text-transform:uppercase; border:1px solid var(--ink); padding:2px 8px; color:var(--ink); background:var(--paper);">Render</span>
+                        </div>
+                    </div>
+
+                    <!-- Open to -->
+                    <div style="margin-bottom:18px;">
+                        <p style="font-family:'Libre Baskerville',serif; font-size:0.58rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); margin-bottom:6px;">Open To</p>
+                        <p style="font-size:0.82rem; line-height:1.6; color:var(--gray);">Internships in cybersecurity or backend development. Open to collaborations, freelance work, and tech networks.</p>
+                    </div>
+
+                    <!-- CTA button -->
+                    <a href="#contact" style="
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          gap:8px;
+          background:var(--ink);
+          color:var(--paper);
+          font-family:'Libre Baskerville',serif;
+          font-size:0.65rem;
+          letter-spacing:0.15em;
+          text-transform:uppercase;
+          padding:10px 16px;
+          text-decoration:none;
+          border:2px solid var(--ink);
+          transition:background 0.2s, color 0.2s;
+        " onmouseover="this.style.background='var(--red)'; this.style.borderColor='var(--red)'" onmouseout="this.style.background='var(--ink)'; this.style.borderColor='var(--ink)'">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <rect x="1" y="2" width="10" height="8" rx="1" stroke="white" stroke-width="1.2" fill="none"/>
+            <path d="M1 4l5 3.5L11 4" stroke="white" stroke-width="1.2" fill="none"/>
+          </svg> Get In Touch
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom strip -->
+            <div style="
+      position:relative;
+      z-index:2;
+      border-top:2px solid var(--ink);
+      background:var(--paper);
+      padding:10px 28px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    ">
+                <span style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--light-gray);">◆ The Pathak Press · Portfolio Edition</span>
+                <span style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--light-gray);">"Code is the new ink — and security, the press." ◆</span>
+            </div>
+
+        </div>
+    </section>
+  
+
+  <div class="section-rule">
   <div class="section-header"><h2>The Learning Ledger</h2></div>
 </div>
  
@@ -680,6 +1020,42 @@
                     });
                 }, 60);
             }
+        }
+
+  (function() {
+            var banner = document.querySelector('#video-intro [style*="grid-template-columns:1fr 420px 1fr"]');
+            if (banner) {
+                function checkWidth() {
+                    if (window.innerWidth <= 860) {
+                        banner.style.gridTemplateColumns = '1fr';
+                        banner.style.padding = '24px 16px';
+                        var cols = banner.children;
+                        for (var i = 0; i < cols.length; i++) {
+                            cols[i].style.borderRight = 'none';
+                            cols[i].style.borderLeft = 'none';
+                            cols[i].style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+                            cols[i].style.paddingLeft = '0';
+                            cols[i].style.paddingRight = '0';
+                            cols[i].style.paddingBottom = '24px';
+                            cols[i].style.marginBottom = '24px';
+                        }
+                        cols[cols.length - 1].style.borderBottom = 'none';
+                    }
+                }
+                checkWidth();
+                window.addEventListener('resize', checkWidth);
+            }
+        })();
+
+        function playVideo() {
+            var cover = document.getElementById('video-cover');
+            var overlay = document.getElementById('play-overlay');
+            var video = document.getElementById('intro-video');
+
+            cover.style.display = 'none';
+            overlay.style.display = 'none';
+            video.style.display = 'block';
+            video.play();
         }
 </script>
 </body>
