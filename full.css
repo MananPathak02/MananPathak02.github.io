@@ -1,0 +1,716 @@
+:root {
+    --ink: #0a0a0a;
+    --paper: #f5f0e8;
+    --cream: #ede8d8;
+    --red: #c0392b;
+    --gray: #4a4a4a;
+    --light-gray: #888;
+    --rule: #0a0a0a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Serif 4', serif;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 6px 20px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    border-bottom: 3px double var(--ink);
+    padding: 18px 40px 14px;
+    background: var(--paper);
+  }
+
+  .masthead-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+  }
+
+  .masthead-title {
+    text-align: center;
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  .masthead-sub {
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-top: 4px;
+  }
+
+  .masthead-edition {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--ink);
+    padding-top: 8px;
+    margin-top: 10px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+  }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--ink);
+    display: flex;
+    justify-content: center;
+    gap: 0;
+  }
+
+  nav a {
+    color: var(--paper);
+    text-decoration: none;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 9px 22px;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    transition: background 0.2s, color 0.2s;
+  }
+
+  nav a:first-child { border-left: 1px solid rgba(255,255,255,0.15); }
+
+  nav a:hover {
+    background: var(--red);
+    color: #fff;
+  }
+
+  /* ── BREAKING TICKER ── */
+  .ticker-wrap {
+    background: var(--red);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 36px;
+  }
+
+  .ticker-label {
+    background: black;
+    color: #fff;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0 18px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    position:relative;
+    z-index:2;
+    flex-shrink: 0;
+  }
+
+  .ticker-content {
+    display: flex;
+    animation: ticker 30s linear infinite;
+    white-space: nowrap;
+  }
+
+  .ticker-content span {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    padding: 0 40px;
+  }
+
+  .ticker-content span::after {
+    content: ' ◆ ';
+    opacity: 0.6;
+  }
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── HERO SECTION ── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 0;
+    border-bottom: 2px solid var(--ink);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .hero-content {
+    padding: 30px 30px 30px 0;
+    border-right: 1px solid var(--ink);
+  }
+
+  .hero-kicker {
+    display: inline-block;
+    background: var(--red);
+    color: #fff;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    margin-bottom: 14px;
+  }
+
+  .hero-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 18px;
+    color: var(--ink);
+  }
+
+  .hero-headline em {
+    font-style: italic;
+    color: var(--red);
+  }
+
+  .hero-deck {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--gray);
+    border-top: 3px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 14px 0;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .hero-byline {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 20px;
+  }
+
+  .hero-byline strong { color: var(--ink); }
+
+  .hero-body {
+    columns: 2;
+    column-gap: 24px;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    column-rule: 1px solid #ccc;
+  }
+
+  .hero-body p { margin-bottom: 12px; break-inside: avoid; }
+
+  .hero-body p:first-child::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.2rem;
+    font-weight: 900;
+    float: left;
+    line-height: 0.75;
+    margin-right: 8px;
+    margin-top: 8px;
+    color: var(--ink);
+  }
+
+  /* ── HERO PHOTO PANEL ── */
+  .hero-photo-panel {
+    padding: 30px 0 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .photo-frame {
+    position: relative;
+    width: 100%;
+  }
+
+  .photo-frame-inner {
+    border: 8px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--red);
+    overflow: hidden;
+    aspect-ratio: 2/3;
+    background: #d4cfc4;
+    position: relative;
+  }
+
+  /* Halftone / duotone overlay effect using CSS */
+  .photo-frame-inner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(0,0,0,0.03) 3px,
+        rgba(0,0,0,0.03) 4px
+      );
+    pointer-events: none;
+    mix-blend-mode: multiply;
+  }
+
+  .portrait-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(160deg, #c9c3b3 0%, #a8a098 50%, #8a8478 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Silhouette shape */
+  .portrait-placeholder::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 340px;
+    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+    clip-path: polygon(30% 0%, 70% 0%, 85% 8%, 90% 20%, 88% 35%, 80% 45%, 70% 50%, 65% 55%, 100% 100%, 0% 100%, 35% 55%, 30% 50%, 20% 45%, 12% 35%, 10% 20%, 15% 8%);
+  }
+
+  /* Head circle */
+  .portrait-placeholder::after {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+    border-radius: 50%;
+  }
+
+  .photo-caption {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.68rem;
+    font-style: italic;
+    color: var(--gray);
+    text-align: center;
+    border-top: 1px solid var(--ink);
+    margin-top: 10px;
+    padding-top: 8px;
+    width: 100%;
+  }
+
+  .pull-quote {
+    border-top: 3px solid var(--ink);
+    border-bottom: 3px solid var(--ink);
+    padding: 16px 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .pull-quote p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+
+  .pull-quote cite {
+    display: block;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-top: 8px;
+  }
+
+  /* ── SECTION RULE ── */
+  .section-rule {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0 14px;
+  }
+
+  .section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+
+  .section-header::before,
+  .section-header::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: var(--ink);
+  }
+
+  /* ── SKILLS SECTION ── */
+  .skills-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 30px;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .skill-column {
+    padding: 0 24px 0 0;
+    border-right: 1px solid var(--ink);
+  }
+
+  .skill-column:last-child { border-right: none; padding-right: 0; }
+  .skill-column:not(:first-child) { padding-left: 24px; }
+
+  .skill-column h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .skill-column p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--gray);
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .skill-tag {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid var(--ink);
+    padding: 3px 10px;
+    color: var(--ink);
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .skill-tag:hover {
+    background: var(--ink);
+    color: var(--paper);
+    cursor: default;
+  }
+
+  /* ── PROJECTS ── */
+  .projects-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 30px;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+  }
+
+  .project-card {
+    padding: 0 24px 0 0;
+    border-right: 1px solid var(--ink);
+  }
+
+  .project-card:last-child { border-right: none; padding-right: 0; }
+  .project-card:not(:first-child) { padding-left: 24px; }
+
+  .project-card-main .project-visual {
+    height: 180px;
+    background: var(--ink);
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-visual-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(255,255,255,0.08);
+    letter-spacing: -0.05em;
+    user-select: none;
+  }
+
+  .project-visual-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--red);
+    color: #fff;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+  }
+
+  .project-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .project-card-main h3 { font-size: 1.5rem; }
+  .project-card:not(.project-card-main) h3 { font-size: 1.05rem; }
+
+  .project-card p {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: var(--gray);
+  }
+
+  .project-meta {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .project-tag {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--red);
+    border-bottom: 1px solid var(--red);
+    padding-bottom: 1px;
+  }
+
+  .project-divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 16px 0;
+  }
+
+  /* ── ABOUT / CONTACT ROW ── */
+  .bottom-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .about-col {
+    padding: 0 30px 0 0;
+    border-right: 1px solid var(--ink);
+  }
+
+  .contact-col {
+    padding: 0 0 0 30px;
+  }
+
+  .about-col p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--gray);
+    margin-bottom: 12px;
+  }
+
+  /* ── CONTACT ── */
+  .contact-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .contact-item:last-child { border-bottom: none; }
+
+  .contact-label {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 700;
+    min-width: 80px;
+    margin-top: 2px;
+  }
+
+  .contact-value {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.9rem;
+    color: var(--ink);
+  }
+
+  /* ── CTA BUTTON ── */
+  .cta-btn {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 12px 28px;
+    text-decoration: none;
+    margin-top: 20px;
+    border: 2px solid var(--ink);
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+
+  .cta-btn:hover {
+    background: var(--red);
+    border-color: var(--red);
+    color: #fff;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 20px 40px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+
+  footer p { opacity: 0.7; }
+  footer strong { opacity: 1; color: #fff; font-style: italic; }
+
+  /* ── STAT BOXES ── */
+  .stat-strip {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--ink);
+    border-top: 1px solid var(--ink);
+    margin: 20px 0 0;
+  }
+
+  .stat-item { text-align: center; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--ink);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* ── ANIMATIONS ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; padding: 0 20px; }
+    .hero-content { border-right: none; padding-right: 0; }
+    .hero-photo-panel { padding: 0; }
+    .hero-body { columns: 1; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .skill-column { border-right: none; border-bottom: 1px solid #ccc; padding: 0 0 16px; margin-bottom: 16px; }
+    .skill-column:not(:first-child) { padding-left: 0; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-card { border-right: none; border-bottom: 1px solid #ccc; padding: 0 0 20px; margin-bottom: 20px; }
+    .project-card:not(:first-child) { padding-left: 0; }
+    .bottom-section { grid-template-columns: 1fr; gap: 30px; padding: 0 20px 40px; }
+    .about-col { border-right: none; padding-right: 0; border-bottom: 1px solid #ccc; padding-bottom: 30px; }
+    .contact-col { padding-left: 0; }
+    nav { flex-wrap: wrap; }
+    .masthead { padding: 14px 20px 10px; }
+    .section-rule { padding: 0 20px; }
+    .skills-section, .projects-section { padding: 0 20px 30px; }
+  }
