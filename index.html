@@ -8,6 +8,83 @@
 <link rel="stylesheet" href="full.css">
 </head>
 <body>
+
+  <!-- MOBILE WARNING -->
+<div id="mobile-warning" style="display:none;">
+  <div style="
+    position:fixed;
+    inset:0;
+    background:var(--ink);
+    z-index:99999;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:32px;
+    text-align:center;
+  ">
+    <!-- Newspaper header -->
+    <p style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:12px;">The Pathak Press · Special Notice</p>
+
+    <!-- Warning icon -->
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" style="margin-bottom:20px;">
+      <polygon points="24,4 44,42 4,42" stroke="var(--red)" stroke-width="2.5" fill="none"/>
+      <line x1="24" y1="18" x2="24" y2="30" stroke="var(--red)" stroke-width="2.5"/>
+      <circle cx="24" cy="36" r="1.8" fill="var(--red)"/>
+    </svg>
+
+    <!-- Headline -->
+    <h2 style="font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:900; color:#fff; line-height:1.2; margin-bottom:12px;">
+      Best Viewed On<br><em style="color:var(--red);">Desktop</em>
+    </h2>
+
+    <!-- Rule -->
+    <div style="width:60px; height:2px; background:var(--red); margin:0 auto 16px;"></div>
+
+    <!-- Message -->
+    <p style="font-family:'Libre Baskerville',serif; font-size:0.82rem; line-height:1.7; color:rgba(255,255,255,0.65); max-width:280px; margin-bottom:24px;">
+      This portfolio is designed for desktop viewing. For the full editorial experience, please open it on a desktop browser or switch to <strong style="color:#fff;">Desktop Mode</strong> in your mobile browser settings.
+    </p>
+
+    <!-- How to instruction -->
+    <div style="border:1px solid rgba(255,255,255,0.15); padding:14px 20px; margin-bottom:24px; max-width:280px;">
+      <p style="font-family:'Libre Baskerville',serif; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); margin-bottom:8px;">How To Enable Desktop Mode</p>
+      <p style="font-family:'Libre Baskerville',serif; font-size:0.72rem; color:rgba(255,255,255,0.55); line-height:1.6;">
+        Chrome → tap ⋮ menu → tick <em>"Desktop site"</em><br>
+        Safari → tap AA → tap <em>"Request Desktop Website"</em>
+      </p>
+    </div>
+
+    <!-- Dismiss button -->
+    <button onclick="document.getElementById('mobile-warning').style.display='none'" style="
+      background:transparent;
+      border:2px solid rgba(255,255,255,0.3);
+      color:rgba(255,255,255,0.5);
+      font-family:'Libre Baskerville',serif;
+      font-size:0.65rem;
+      letter-spacing:0.15em;
+      text-transform:uppercase;
+      padding:10px 24px;
+      cursor:pointer;
+      transition:border-color 0.2s, color 0.2s;
+    "
+    onmouseover="this.style.borderColor='var(--red)'; this.style.color='#fff'"
+    onmouseout="this.style.borderColor='rgba(255,255,255,0.3)'; this.style.color='rgba(255,255,255,0.5)'">
+      Continue Anyway →
+    </button>
+
+    <!-- Bottom line -->
+    <p style="font-family:'Libre Baskerville',serif; font-size:0.58rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.2); margin-top:24px;">◆ The Pathak Press · Portfolio Edition ◆</p>
+  </div>
+</div>
+
+<script>
+  if (window.innerWidth < 860) {
+    document.getElementById('mobile-warning').style.display = 'block';
+  }
+</script>
+
+  
 <!-- TOP BAR -->
 <div class="top-bar">
   ★ Established 2011 &nbsp;·&nbsp; Graphic Era Hill University, Dehradun &nbsp;·&nbsp; Cybersecurity & Development Edition ★
