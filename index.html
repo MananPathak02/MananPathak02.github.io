@@ -773,239 +773,469 @@
   
 
   <div class="section-rule">
-  <div class="section-header"><h2>The Learning Ledger</h2></div>
+  <div class="section-header"><h2>PESE Class Journey</h2></div>
 </div>
- 
-<section id="learnings" class="learnings-section fade-in">
- 
-  <div class="learnings-intro-row">
-    <p class="learnings-byline">Subjects studied, concepts mastered &amp; knowledge applied in production — click any subject to expand.</p>
-    <span class="learnings-count-badge">5 Subjects</span>
-  </div>
- 
-  <!-- ── Subject 1: Cybersecurity ── -->
-  <div class="learn-row" onclick="toggleLearn(this)">
-    <div class="learn-row-header">
-      <span class="learn-row-num">01</span>
-      <div class="learn-row-title-wrap">
-        <span class="learn-row-subject">Cybersecurity</span>
-        <span class="learn-row-title">Ethical Hacking &amp; Penetration Testing</span>
-      </div>
-      <div class="learn-row-chips">
-        <span class="l-chip">Cisco Certified</span>
-        <span class="l-chip">Udemy</span>
-      </div>
-      <span class="learn-row-arrow">›</span>
-    </div>
-    <div class="learn-body">
-      <div class="learn-body-inner">
-        <div class="learn-body-grid">
-          <div class="learn-col">
-            <span class="learn-col-label">What I Learned</span>
-            <p class="learn-col-body">The attacker's mindset — how systems fail so they can be built to stand. Covered the full penetration testing lifecycle from reconnaissance to exploitation to reporting, grounded in Cisco Networking Academy's curriculum and a complete Udemy ethical hacking track.</p>
-          </div>
-          <div class="learn-col">
-            <span class="learn-col-label">Key Concepts</span>
-            <ul class="learn-concept-list">
-              <li>Network scanning with Nmap &amp; Wireshark</li>
-              <li>SQL Injection — blind, error-based &amp; prevention</li>
-              <li>XSS, CSRF &amp; MITM attack vectors</li>
-              <li>Metasploit framework &amp; exploit modules</li>
-              <li>Firewalls, IDS/IPS &amp; defensive hardening</li>
-              <li>Social engineering &amp; phishing analysis</li>
-            </ul>
-          </div>
-          <div class="learn-col">
-            <span class="learn-col-label">Mastery &amp; Application</span>
-            <div class="learn-mastery-wrap">
-              <div class="learn-mastery-label"><span>Proficiency</span><span>Advanced</span></div>
-              <div class="learn-mastery-track"><div class="learn-mastery-fill" data-width="88"></div></div>
-            </div>
-            <p class="learn-col-body" style="margin-top:14px;">Applied directly: JWT auth hardening in SnapLink &amp; BloodBank, input validation preventing injection across all REST endpoints, RBAC security model in BloodBank. Two Cisco certs earned.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
- 
-  <!-- ── Subject 2: DSA ── -->
-  <div class="learn-row" onclick="toggleLearn(this)">
-    <div class="learn-row-header">
-      <span class="learn-row-num">02</span>
-      <div class="learn-row-title-wrap">
-        <span class="learn-row-subject">Data Structures &amp; Algorithms</span>
-        <span class="learn-row-title">Problem Solving &amp; Competitive Programming</span>
-      </div>
-      <div class="learn-row-chips">
-        <span class="l-chip">250+ LeetCode</span>
-        <span class="l-chip">Med / Hard</span>
-      </div>
-      <span class="learn-row-arrow">›</span>
-    </div>
-    <div class="learn-body">
-      <div class="learn-body-inner">
-        <div class="learn-body-grid">
-          <div class="learn-col">
-            <span class="learn-col-label">What I Learned</span>
-            <p class="learn-col-body">Systematic problem decomposition — translating real-world constraints into optimal algorithms. Worked through arrays, linked lists, trees, graphs and dynamic programming by grinding LeetCode Medium and Hard problems, internalising patterns over solutions.</p>
-          </div>
-          <div class="learn-col">
-            <span class="learn-col-label">Key Concepts</span>
-            <ul class="learn-concept-list">
-              <li>Binary search trees &amp; AVL rotations</li>
-              <li>Graph BFS / DFS &amp; Dijkstra's shortest path</li>
-              <li>Dynamic programming — memoisation &amp; tabulation</li>
-              <li>0/1 Knapsack &amp; greedy algorithms</li>
-              <li>Sliding window &amp; two-pointer techniques</li>
-              <li>Hashing, heaps &amp; priority queues</li>
-            </ul>
-          </div>
-          <div class="learn-col">
-            <span class="learn-col-label">Mastery &amp; Application</span>
-            <div class="learn-mastery-wrap">
-              <div class="learn-mastery-label"><span>Proficiency</span><span>Intermediate+</span></div>
-              <div class="learn-mastery-track"><div class="learn-mastery-fill" data-width="75"></div></div>
-            </div>
-            <p class="learn-col-body" style="margin-top:14px;">The 0/1 Knapsack algorithm powers BloodBank's blood dispatch optimiser across concurrent hospital requests — a direct classroom-to-production application.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
- 
-  <!-- ── Subject 3: Web Dev / Backend ── -->
-  <div class="learn-row" onclick="toggleLearn(this)">
-    <div class="learn-row-header">
-      <span class="learn-row-num">03</span>
-      <div class="learn-row-title-wrap">
-        <span class="learn-row-subject">Full-Stack Web Development</span>
-        <span class="learn-row-title">Backend Systems, APIs &amp; Authentication</span>
-      </div>
-      <div class="learn-row-chips">
-        <span class="l-chip">3 Production Apps</span>
-        <span class="l-chip">Meta · Coursera</span>
-      </div>
-      <span class="learn-row-arrow">›</span>
-    </div>
-    <div class="learn-body">
-      <div class="learn-body-inner">
-        <div class="learn-body-grid">
-          <div class="learn-col">
-            <span class="learn-col-label">What I Learned</span>
-            <p class="learn-col-body">From semantic HTML and responsive CSS through to Flask REST APIs, JWT authentication, bcrypt hashing, rate limiting, and server-side session management. Certified in Mobile Backend Development by Meta via Coursera.</p>
-          </div>
-          <div class="learn-col">
-            <span class="learn-col-label">Key Concepts</span>
-            <ul class="learn-concept-list">
-              <li>REST API design — HTTP semantics &amp; status codes</li>
-              <li>JWT access tokens &amp; refresh token rotation</li>
-              <li>bcrypt hashing — salt rounds &amp; timing resistance</li>
-              <li>Rate limiting — token bucket vs sliding window</li>
-              <li>Flask-Mail, Gunicorn &amp; Render deployment</li>
-              <li>Responsive CSS &amp; JavaScript DOM APIs</li>
-            </ul>
-          </div>
-          <div class="learn-col">
-            <span class="learn-col-label">Mastery &amp; Application</span>
-            <div class="learn-mastery-wrap">
-              <div class="learn-mastery-label"><span>Proficiency</span><span>Advanced</span></div>
-              <div class="learn-mastery-track"><div class="learn-mastery-fill" data-width="90"></div></div>
-            </div>
-            <p class="learn-col-body" style="margin-top:14px;">All three projects — SnapLink, Aspira, BloodBank — are live production deployments built entirely from this knowledge stack. Aspira acquired 30+ users in 2 weeks.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
- 
-  <!-- ── Subject 4: Databases ── -->
-  <div class="learn-row" onclick="toggleLearn(this)">
-    <div class="learn-row-header">
-      <span class="learn-row-num">04</span>
-      <div class="learn-row-title-wrap">
-        <span class="learn-row-subject">Database Systems</span>
-        <span class="learn-row-title">SQL, MongoDB &amp; Schema Design</span>
-      </div>
-      <div class="learn-row-chips">
-        <span class="l-chip">GFG Certified</span>
-      </div>
-      <span class="learn-row-arrow">›</span>
-    </div>
-    <div class="learn-body">
-      <div class="learn-body-inner">
-        <div class="learn-body-grid">
-          <div class="learn-col">
-            <span class="learn-col-label">What I Learned</span>
-            <p class="learn-col-body">Relational theory through to NoSQL document modelling. SQL covered normalisation, complex joins and subqueries. MongoDB covered schema design patterns, aggregation pipelines, indexing and Atlas cloud deployment — certified by GeeksForGeeks.</p>
-          </div>
-          <div class="learn-col">
-            <span class="learn-col-label">Key Concepts</span>
-            <ul class="learn-concept-list">
-              <li>Normalisation — 1NF through BCNF</li>
-              <li>SQL joins, subqueries &amp; window functions</li>
-              <li>MongoDB $group, $lookup &amp; $unwind pipelines</li>
-              <li>Indexing strategies &amp; query optimisation</li>
-              <li>Atlas cloud deployment &amp; connection pooling</li>
-            </ul>
-          </div>
-          <div class="learn-col">
-            <span class="learn-col-label">Mastery &amp; Application</span>
-            <div class="learn-mastery-wrap">
-              <div class="learn-mastery-label"><span>Proficiency</span><span>Proficient</span></div>
-              <div class="learn-mastery-track"><div class="learn-mastery-fill" data-width="82"></div></div>
-            </div>
-            <p class="learn-col-body" style="margin-top:14px;">SnapLink's per-day analytics return in under 100ms using MongoDB aggregation. BloodBank's multi-collection RBAC queries are fully indexed. All projects run on Atlas.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
- 
-  <!-- ── Subject 5: Systems ── -->
-  <div class="learn-row" onclick="toggleLearn(this)">
-    <div class="learn-row-header">
-      <span class="learn-row-num">05</span>
-      <div class="learn-row-title-wrap">
-        <span class="learn-row-subject">Systems &amp; Networks</span>
-        <span class="learn-row-title">OS Internals, OOP &amp; Computer Networks</span>
-      </div>
-      <div class="learn-row-chips">
-        <span class="l-chip">Core Curriculum</span>
-      </div>
-      <span class="learn-row-arrow">›</span>
-    </div>
-    <div class="learn-body">
-      <div class="learn-body-inner">
-        <div class="learn-body-grid">
-          <div class="learn-col">
-            <span class="learn-col-label">What I Learned</span>
-            <p class="learn-col-body">How computers actually work beneath the abstraction — process scheduling, memory management, TCP/IP stack, and OOP design principles in Java and C++. These subjects form the intellectual substrate that makes security reasoning possible.</p>
-          </div>
-          <div class="learn-col">
-            <span class="learn-col-label">Key Concepts</span>
-            <ul class="learn-concept-list">
-              <li>Process scheduling &amp; deadlock handling</li>
-              <li>Paging, segmentation &amp; virtual memory</li>
-              <li>OSI model &amp; TCP/IP three-way handshake</li>
-              <li>Subnetting, routing protocols &amp; packet analysis</li>
-              <li>SOLID principles &amp; design patterns (Java/C++)</li>
-            </ul>
-          </div>
-          <div class="learn-col">
-            <span class="learn-col-label">Mastery &amp; Application</span>
-            <div class="learn-mastery-wrap">
-              <div class="learn-mastery-label"><span>Proficiency</span><span>Intermediate</span></div>
-              <div class="learn-mastery-track"><div class="learn-mastery-fill" data-width="70"></div></div>
-            </div>
-            <p class="learn-col-body" style="margin-top:14px;">BloodBank's RBAC model is a direct implementation of the SOLID open/closed principle. Network knowledge underpins all security attack-vector analysis across Cisco coursework.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
- 
-</section>
 
+<section id="learnings" class="learnings-section fade-in">
+
+<style>
+.pese-wrap *{box-sizing:border-box}
+.pese-wrap{font-family:inherit;width:100%;padding:1rem 0}
+.pese-intro-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;gap:12px}
+.pese-byline{font-size:14px;opacity:0.6;line-height:1.5}
+.pese-count-badge{flex-shrink:0;font-size:12px;font-weight:500;padding:4px 12px;border-radius:99px;border:0.5px solid rgba(128,128,128,0.3);opacity:0.7;white-space:nowrap}
+.pese-day-row{border:0.5px solid rgba(128,128,128,0.2);border-radius:12px;margin-bottom:10px;overflow:hidden;background:transparent;transition:border-color 0.15s}
+.pese-day-row:hover{border-color:rgba(128,128,128,0.4)}
+.pese-day-header{display:flex;align-items:center;gap:14px;padding:14px 18px;cursor:pointer;user-select:none}
+.pese-day-num{font-size:11px;font-weight:500;opacity:0.4;letter-spacing:0.08em;flex-shrink:0;width:44px}
+.pese-title-wrap{flex:1;min-width:0}
+.pese-subject{display:block;font-size:11px;font-weight:500;opacity:0.4;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px}
+.pese-title{font-size:14px;font-weight:500;line-height:1.3}
+.pese-chips{display:flex;gap:6px;flex-wrap:wrap;flex-shrink:0}
+.pese-chip{font-size:11px;padding:3px 10px;border-radius:99px;border:0.5px solid rgba(128,128,128,0.25);opacity:0.7}
+.pese-arrow{font-size:18px;opacity:0.3;flex-shrink:0;transition:transform 0.2s;line-height:1}
+.pese-day-row.open .pese-arrow{transform:rotate(90deg)}
+.pese-body{max-height:0;overflow:hidden;transition:max-height 0.35s cubic-bezier(0.4,0,0.2,1)}
+.pese-day-row.open .pese-body{max-height:1200px}
+.pese-body-inner{padding:0 18px 20px}
+.pese-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:4px}
+.pese-grid-wide{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr) minmax(0,1fr);gap:18px;margin-top:4px}
+.pese-col-label{font-size:11px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;opacity:0.4;display:block;margin-bottom:10px}
+.pese-col-body{font-size:13px;opacity:0.75;line-height:1.65;margin-bottom:8px}
+.pese-param-card{border:0.5px solid rgba(128,128,128,0.2);border-radius:8px;padding:9px 12px;margin-bottom:7px}
+.pese-param-name{font-size:12px;font-weight:500;margin-bottom:3px;margin-top:0}
+.pese-param-desc{font-size:12px;opacity:0.65;line-height:1.55;margin:0}
+.pese-concept-list{list-style:none;display:flex;flex-direction:column;gap:6px;padding:0;margin:0}
+.pese-concept-list li{font-size:13px;opacity:0.75;line-height:1.5;padding-left:14px;position:relative}
+.pese-concept-list li::before{content:"—";position:absolute;left:0;opacity:0.4;font-size:11px;top:2px}
+.pese-takeaway{border-left:2px solid rgba(128,128,128,0.3);padding:10px 14px;border-radius:0 8px 8px 0;background:rgba(128,128,128,0.05)}
+.pese-takeaway p{font-size:13px;opacity:0.75;line-height:1.65;margin:0}
+.pese-stat-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.pese-stat-box{background:rgba(128,128,128,0.06);border-radius:8px;padding:10px 14px;flex:1;min-width:80px}
+.pese-stat-val{font-size:20px;font-weight:500;line-height:1}
+.pese-stat-lbl{font-size:11px;opacity:0.5;margin-top:3px}
+.pese-rule-row{display:flex;gap:10px;align-items:flex-start;margin-bottom:9px}
+.pese-rule-num{font-size:11px;font-weight:500;opacity:0.35;flex-shrink:0;padding-top:2px;width:16px}
+.pese-rule-text{font-size:13px;opacity:0.75;line-height:1.55;margin:0}
+.pese-rule-text strong{font-weight:500}
+.pese-topic-wrap{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.pese-topic-pill{font-size:12px;padding:4px 11px;border-radius:99px;border:0.5px solid rgba(128,128,128,0.25);opacity:0.75}
+.pese-resume-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;text-decoration:none;border:0.5px solid rgba(128,128,128,0.25);border-radius:8px;padding:8px 14px;margin-top:10px;opacity:0.8;transition:opacity 0.15s;color:inherit}
+.pese-resume-link:hover{opacity:1}
+</style>
+
+<div class="pese-wrap">
+
+  <div class="pese-intro-row">
+    <p class="pese-byline">A chronological log of professional and technical skills acquired during the PESE lecture series — click any day to expand.</p>
+    <span class="pese-count-badge">8 Sessions</span>
+  </div>
+
+  <!-- DAY 01 -->
+  <div class="pese-day-row" onclick="this.classList.toggle('open')">
+    <div class="pese-day-header">
+      <span class="pese-day-num">Day 01</span>
+      <div class="pese-title-wrap">
+        <span class="pese-subject">PESE</span>
+        <span class="pese-title">Self Introduction</span>
+      </div>
+      <div class="pese-chips">
+        <span class="pese-chip">Communication</span>
+        <span class="pese-chip">Soft Skills</span>
+      </div>
+      <span class="pese-arrow">›</span>
+    </div>
+    <div class="pese-body">
+      <div class="pese-body-inner">
+        <div class="pese-grid">
+          <div>
+            <span class="pese-col-label">Overview</span>
+            <p class="pese-col-body">The art of self-introduction — one of the most essential yet underestimated professional skills. Explored how first impressions are built not just through what you say, but how you say it. Structured around five key parameters that together determine how you land in any professional room.</p>
+          </div>
+          <div>
+            <span class="pese-col-label">5 Key Parameters</span>
+            <div class="pese-param-card">
+              <p class="pese-param-name">Effective Communication</p>
+              <p class="pese-param-desc">Be precise and to the point. Language must reflect clarity and be grammatically correct.</p>
+            </div>
+            <div class="pese-param-card">
+              <p class="pese-param-name">Presentation Skill</p>
+              <p class="pese-param-desc">Tone, pace, and word choice collectively shape how the audience perceives you.</p>
+            </div>
+            <div class="pese-param-card">
+              <p class="pese-param-name">Self Confidence</p>
+              <p class="pese-param-desc">Eye contact, upright posture, and a steady voice communicate assurance before you say a word.</p>
+            </div>
+            <div class="pese-param-card">
+              <p class="pese-param-name">Structural Speech</p>
+              <p class="pese-param-desc">Clear opening — who you are. Purposeful closing — what you bring to the table.</p>
+            </div>
+            <div class="pese-param-card">
+              <p class="pese-param-name">Positive Body Language</p>
+              <p class="pese-param-desc">Eye contact, a warm smile, and open gestures significantly enhance impact.</p>
+            </div>
+          </div>
+          <div>
+            <span class="pese-col-label">Core Takeaway</span>
+            <div class="pese-takeaway">
+              <p>Self-introduction is not about reciting your resume. It is about controlling the narrative of how others first perceive your competence and character. Every parameter reinforces the others — strong structure with poor confidence, or great words with closed body language, breaks the whole.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 02 -->
+  <div class="pese-day-row" onclick="this.classList.toggle('open')">
+    <div class="pese-day-header">
+      <span class="pese-day-num">Day 02</span>
+      <div class="pese-title-wrap">
+        <span class="pese-subject">PESE</span>
+        <span class="pese-title">Self-Introduction Video</span>
+      </div>
+      <div class="pese-chips">
+        <span class="pese-chip">Video</span>
+        <span class="pese-chip">Practice</span>
+      </div>
+      <span class="pese-arrow">›</span>
+    </div>
+    <div class="pese-body">
+      <div class="pese-body-inner">
+        <div class="pese-grid">
+          <div>
+            <span class="pese-col-label">What We Did</span>
+            <p class="pese-col-body">Converted Day 01 theory into a recorded self-introduction. The shift from knowing to doing exposed gaps that classroom study never reveals — pace, filler words, awkward pauses, and camera presence all become visible only when you watch yourself back.</p>
+          </div>
+          <div>
+            <span class="pese-col-label">Skills Practiced</span>
+            <ul class="pese-concept-list">
+              <li>On-camera confidence and eye contact with the lens</li>
+              <li>Applying the 5-parameter framework under pressure</li>
+              <li>Self-review and critical analysis of own performance</li>
+              <li>Iteration — recording, reviewing, refining, repeating</li>
+              <li>Managing nervousness through deliberate preparation</li>
+            </ul>
+          </div>
+          <div>
+            <span class="pese-col-label">Core Takeaway</span>
+            <div class="pese-takeaway">
+              <p>Theory and execution are entirely different skills. Recording yourself forces honest self-assessment. Most improvements come not from knowing more, but from watching what you actually do versus what you think you do.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 03 -->
+  <div class="pese-day-row" onclick="this.classList.toggle('open')">
+    <div class="pese-day-header">
+      <span class="pese-day-num">Day 03</span>
+      <div class="pese-title-wrap">
+        <span class="pese-subject">PESE</span>
+        <span class="pese-title">Product Pitch — Aspira</span>
+      </div>
+      <div class="pese-chips">
+        <span class="pese-chip">Flask</span>
+        <span class="pese-chip">MongoDB</span>
+        <span class="pese-chip">Product Pitch</span>
+      </div>
+      <span class="pese-arrow">›</span>
+    </div>
+    <div class="pese-body">
+      <div class="pese-body-inner">
+        <div class="pese-grid">
+          <div>
+            <span class="pese-col-label">The Product</span>
+            <p class="pese-col-body">Aspira is an AI-powered career guidance platform built for students navigating their professional path. It closes the gap between raw academic potential and actionable career direction — a space where most students are underserved by generic advice and overwhelmed by options.</p>
+            <p class="pese-col-body">The pitch led with the problem: students don't lack ambition, they lack a personalised, intelligent guide. Aspira is that guide.</p>
+          </div>
+          <div>
+            <span class="pese-col-label">Stack & Features</span>
+            <div class="pese-topic-wrap" style="margin-bottom:12px">
+              <span class="pese-topic-pill">Python / Flask</span>
+              <span class="pese-topic-pill">MongoDB Atlas</span>
+              <span class="pese-topic-pill">JWT Auth</span>
+              <span class="pese-topic-pill">REST API</span>
+              <span class="pese-topic-pill">Gemini AI</span>
+            </div>
+            <ul class="pese-concept-list">
+              <li>AI-driven career path recommendations based on skills and interests</li>
+              <li>Resume analyser with ATS gap identification</li>
+              <li>Roadmap generator for chosen career tracks</li>
+              <li>Secure login with JWT access and refresh token rotation</li>
+              <li>Deployed live on Render with Gunicorn</li>
+            </ul>
+          </div>
+          <div>
+            <span class="pese-col-label">Traction & Takeaway</span>
+            <div class="pese-stat-row">
+              <div class="pese-stat-box">
+                <div class="pese-stat-val">30+</div>
+                <div class="pese-stat-lbl">Users in 2 weeks</div>
+              </div>
+              <div class="pese-stat-box">
+                <div class="pese-stat-val">Live</div>
+                <div class="pese-stat-lbl">Production deploy</div>
+              </div>
+            </div>
+            <div class="pese-takeaway">
+              <p>The best pitches lead with the problem, not the tech. A solo-built, full-stack AI product can acquire real users quickly when it solves a genuine, specific problem.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 04 -->
+  <div class="pese-day-row" onclick="this.classList.toggle('open')">
+    <div class="pese-day-header">
+      <span class="pese-day-num">Day 04</span>
+      <div class="pese-title-wrap">
+        <span class="pese-subject">PESE</span>
+        <span class="pese-title">Extempore Speaking</span>
+      </div>
+      <div class="pese-chips">
+        <span class="pese-chip">Public Speaking</span>
+        <span class="pese-chip">Spontaneous</span>
+        <span class="pese-chip">Technology</span>
+      </div>
+      <span class="pese-arrow">›</span>
+    </div>
+    <div class="pese-body">
+      <div class="pese-body-inner">
+        <div class="pese-grid">
+          <div>
+            <span class="pese-col-label">The Exercise</span>
+            <p class="pese-col-body">Extempore is spontaneous speaking on a given topic with zero preparation time. The skill being trained is not knowledge recall — it is thought organisation under pressure. Spoke on 7 topics spanning technology and social issues, each requiring a structured, confident response delivered on the spot.</p>
+          </div>
+          <div>
+            <span class="pese-col-label">Topics Covered</span>
+            <div class="pese-topic-wrap">
+              <span class="pese-topic-pill">☁️ Cloud Computing</span>
+              <span class="pese-topic-pill">🔐 Cybersecurity</span>
+              <span class="pese-topic-pill">📘 Data Privacy</span>
+              <span class="pese-topic-pill">⚖️ Work-Life Balance</span>
+              <span class="pese-topic-pill">💰 Digital Currency</span>
+              <span class="pese-topic-pill">🤖 Machine Learning</span>
+              <span class="pese-topic-pill">🔗 Blockchain</span>
+            </div>
+            <p class="pese-col-body" style="margin-top:4px;font-size:12px">Each topic addressed: what it is, why it matters, and a balanced critical view covering both advantages and challenges.</p>
+          </div>
+          <div>
+            <span class="pese-col-label">Skills Built</span>
+            <ul class="pese-concept-list">
+              <li>Rapid thought structuring without prep time</li>
+              <li>Opening strong — defining the topic before diving in</li>
+              <li>Balanced argument construction covering both sides</li>
+              <li>Concise closing that doesn't trail off</li>
+              <li>Managing anxiety when thinking on your feet</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 05 -->
+  <div class="pese-day-row" onclick="this.classList.toggle('open')">
+    <div class="pese-day-header">
+      <span class="pese-day-num">Day 05</span>
+      <div class="pese-title-wrap">
+        <span class="pese-subject">PESE</span>
+        <span class="pese-title">Essay Writing</span>
+      </div>
+      <div class="pese-chips">
+        <span class="pese-chip">Writing</span>
+        <span class="pese-chip">Documentation</span>
+      </div>
+      <span class="pese-arrow">›</span>
+    </div>
+    <div class="pese-body">
+      <div class="pese-body-inner">
+        <div class="pese-grid">
+          <div>
+            <span class="pese-col-label">Why It Matters</span>
+            <p class="pese-col-body">Writing is how engineers communicate ideas that cannot be demoed. Explored how essay writing builds the foundational skill that later manifests as system design docs, technical proposals, and user-facing documentation. If you cannot write clearly, your thinking stays invisible to others.</p>
+          </div>
+          <div>
+            <span class="pese-col-label">Three Pillars</span>
+            <div class="pese-param-card">
+              <p class="pese-param-name">Professional Growth</p>
+              <p class="pese-param-desc">Writing trains logical organisation of thoughts and the ability to explain complex concepts clearly to both technical and non-technical audiences.</p>
+            </div>
+            <div class="pese-param-card">
+              <p class="pese-param-name">Critical Thinking</p>
+              <p class="pese-param-desc">Builds analytical depth — writing forces well-reasoned arguments rather than vague opinions.</p>
+            </div>
+            <div class="pese-param-card">
+              <p class="pese-param-name">Real-World Documentation</p>
+              <p class="pese-param-desc">Software engineers write constantly — docs, design explanations, user manuals. Clarity and precision are engineering skills, not soft skills.</p>
+            </div>
+          </div>
+          <div>
+            <span class="pese-col-label">Core Takeaway</span>
+            <div class="pese-takeaway">
+              <p>Engineers who write well move faster. They align teams without meetings, onboard others without hand-holding, and document decisions that survive beyond the person who made them. Writing is leverage — it scales your thinking beyond yourself.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 06 -->
+  <div class="pese-day-row" onclick="this.classList.toggle('open')">
+    <div class="pese-day-header">
+      <span class="pese-day-num">Day 06</span>
+      <div class="pese-title-wrap">
+        <span class="pese-subject">PESE</span>
+        <span class="pese-title">ATS Resume Writing</span>
+      </div>
+      <div class="pese-chips">
+        <span class="pese-chip">Career</span>
+        <span class="pese-chip">Resume</span>
+      </div>
+      <span class="pese-arrow">›</span>
+    </div>
+    <div class="pese-body">
+      <div class="pese-body-inner">
+        <div class="pese-grid">
+          <div>
+            <span class="pese-col-label">What Is ATS</span>
+            <p class="pese-col-body">Applicant Tracking Systems are the gatekeepers before human eyes ever see your resume. They parse and score based on keyword matches, format compatibility, and structure. A great resume that fails ATS parsing never reaches a recruiter — learned exactly how to make sure yours does.</p>
+          </div>
+          <div>
+            <span class="pese-col-label">Rules That Matter</span>
+            <div class="pese-rule-row"><span class="pese-rule-num">01</span><p class="pese-rule-text"><strong>Single column only.</strong> No tables, graphics, or icons. Use conventional headings like 'Professional Summary' and 'Skills'.</p></div>
+            <div class="pese-rule-row"><span class="pese-rule-num">02</span><p class="pese-rule-text"><strong>Keyword match.</strong> Pull exact phrases from the job description. Use bullet lists for skills, not paragraphs.</p></div>
+            <div class="pese-rule-row"><span class="pese-rule-num">03</span><p class="pese-rule-text"><strong>Quantify everything.</strong> Not "taught students" — "Taught 120+ students with 95% completion rate."</p></div>
+            <div class="pese-rule-row"><span class="pese-rule-num">04</span><p class="pese-rule-text"><strong>ATS killers:</strong> Photos, multi-column layouts, fancy templates, info buried in headers or footers.</p></div>
+          </div>
+          <div>
+            <span class="pese-col-label">Applied Output</span>
+            <div class="pese-takeaway">
+              <p>The best resume is not the most beautiful one — it is the one that survives the machine and then convinces the human. Format for the parser; content for the person.</p>
+            </div>
+            <a class="pese-resume-link" href="https://presktok.github.io/resume.pdf" target="_blank">View My ATS Resume ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 07 -->
+  <div class="pese-day-row" onclick="this.classList.toggle('open')">
+    <div class="pese-day-header">
+      <span class="pese-day-num">Day 07</span>
+      <div class="pese-title-wrap">
+        <span class="pese-subject">PESE</span>
+        <span class="pese-title">Group Discussion — Techniques</span>
+      </div>
+      <div class="pese-chips">
+        <span class="pese-chip">Teamwork</span>
+        <span class="pese-chip">Discussion</span>
+      </div>
+      <span class="pese-arrow">›</span>
+    </div>
+    <div class="pese-body">
+      <div class="pese-body-inner">
+        <div class="pese-grid">
+          <div>
+            <span class="pese-col-label">What GD Tests</span>
+            <p class="pese-col-body">Group Discussion rounds evaluate more than what you know — they test how you think collaboratively, handle disagreement, and contribute value in a group setting. GD is not a debate and not a monologue. It is a conversation where your listening matters as much as your speaking.</p>
+          </div>
+          <div>
+            <span class="pese-col-label">4 Key Techniques</span>
+            <div class="pese-param-card">
+              <p class="pese-param-name">Quality over Quantity</p>
+              <p class="pese-param-desc">Fewer meaningful points beat frequent shallow ones. Interviewers notice who adds substance, not volume.</p>
+            </div>
+            <div class="pese-param-card">
+              <p class="pese-param-name">Entry & Engagement</p>
+              <p class="pese-param-desc">Enter early with a strong point or build on others. Stay visibly engaged even when not speaking.</p>
+            </div>
+            <div class="pese-param-card">
+              <p class="pese-param-name">Respectful Disagreement</p>
+              <p class="pese-param-desc">Frame it as "I see it differently" — never "You're wrong." Aggression kills credibility instantly.</p>
+            </div>
+            <div class="pese-param-card">
+              <p class="pese-param-name">Summarisation</p>
+              <p class="pese-param-desc">Closing with a concise, neutral summary signals maturity and strong listening ability to evaluators.</p>
+            </div>
+          </div>
+          <div>
+            <span class="pese-col-label">Core Takeaway</span>
+            <div class="pese-takeaway">
+              <p>The person who controls the summary controls how the GD is remembered. Listening strategically throughout is what makes a strong close possible — it is not improvised, it is built through attention.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 08 -->
+  <div class="pese-day-row" onclick="this.classList.toggle('open')">
+    <div class="pese-day-header">
+      <span class="pese-day-num">Day 08</span>
+      <div class="pese-title-wrap">
+        <span class="pese-subject">PESE</span>
+        <span class="pese-title">Group Discussion — Live Experience</span>
+      </div>
+      <div class="pese-chips">
+        <span class="pese-chip">GD</span>
+        <span class="pese-chip">Social Issues</span>
+        <span class="pese-chip">Technology</span>
+        <span class="pese-chip">Soft Skills</span>
+      </div>
+      <span class="pese-arrow">›</span>
+    </div>
+    <div class="pese-body">
+      <div class="pese-body-inner">
+        <div class="pese-grid-wide">
+          <div>
+            <span class="pese-col-label">Session Overview</span>
+            <p class="pese-col-body">Moved from GD theory to active participation. Engaged in live group discussions on social and technological topics, applying Day 07 techniques in a real setting. The goal: improve communication, think critically in real time, and express views with confidence and structure.</p>
+            <div class="pese-takeaway" style="margin-top:14px">
+              <p><strong>Overall Reflection</strong><br><br>These discussions built communication, teamwork, and analytical thinking simultaneously. They also revealed how deeply technology and social issues are interconnected — understanding one requires understanding the other.</p>
+            </div>
+          </div>
+          <div>
+            <span class="pese-col-label">Discussions Participated In</span>
+            <div class="pese-param-card">
+              <p class="pese-param-name">📘 Data Privacy</p>
+              <p class="pese-param-desc">Argued that most users unknowingly trade personal data for convenience. Emphasised that privacy is not just a technical issue — it is a social responsibility shared by users, companies, and governments equally.</p>
+            </div>
+            <div class="pese-param-card">
+              <p class="pese-param-name">👩‍💼 Women Empowerment</p>
+              <p class="pese-param-desc">Contributed that true empowerment requires removing structural barriers, not just providing opportunity. Inclusive environments require active design, not passive good intent.</p>
+            </div>
+            <div class="pese-param-card">
+              <p class="pese-param-name">📱 Social Media — Good or Bad?</p>
+              <p class="pese-param-desc">Presented a balanced view: social media itself is a neutral tool; its harm comes from misuse and design incentives that prioritise engagement over wellbeing. Responsible usage and platform accountability both matter.</p>
+            </div>
+          </div>
+          <div>
+            <span class="pese-col-label">Skills Demonstrated</span>
+            <ul class="pese-concept-list">
+              <li>Applied entry and engagement strategy from Day 07</li>
+              <li>Maintained respectful disagreement throughout</li>
+              <li>Constructed balanced, well-reasoned arguments</li>
+              <li>Connected technical topics to broader social context</li>
+              <li>Active listening — building on others, not just waiting to speak</li>
+              <li>Contributed a closing summary in each discussion</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
 <!-- ABOUT + CONTACT -->
 <div class="section-rule">
   <div class="section-header"><h2>Further Reading</h2></div>
