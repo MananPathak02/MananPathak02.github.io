@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE PATHAK PRESS — Archival Engineering & Security Journal</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=UnifrakturMaguntia&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MAIN ARCHIVAL PAGE SHEET CONTAINER -->
+<div class="page-sheet">
+
+  <!-- Engraved Archival Corner Brackets -->
+  <div class="corner-bracket corner-bracket-tl"></div>
+  <div class="corner-bracket corner-bracket-tr"></div>
+  <div class="corner-bracket corner-bracket-bl"></div>
+  <div class="corner-bracket corner-bracket-br"></div>
+
+  <!-- INNER BROADSHEET CONTENT WRAPPER -->
+  <div class="page-sheet-content">
+
+    <!-- MOBILE WARNING -->
+    <div id="mobile-warning" style="display:none;">
+      <div style="position:fixed; inset:0; background:var(--ink); z-index:99999; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:32px; text-align:center;">
+        <p style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:12px;">The Pathak Press · Special Dispatch Notice</p>
+        <h2 style="font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:900; color:#fff; line-height:1.2; margin-bottom:12px;">
+          Best Viewed On<br><em style="color:var(--wine);">Desktop</em>
+        </h2>
+        <div style="width:60px; height:2px; background:var(--wine); margin:0 auto 16px;"></div>
+        <p style="font-family:'Libre Baskerville',serif; font-size:0.82rem; line-height:1.7; color:rgba(255,255,255,0.75); max-width:280px; margin-bottom:24px;">
+          This archival portfolio is optimized for desktop broadsheet viewing. Please open on a desktop browser or enable <strong style="color:#fff;">Desktop Site</strong> in your mobile settings.
+        </p>
+        <button onclick="document.getElementById('mobile-warning').style.display='none'" style="background:transparent; border:2px solid var(--gold); color:var(--gold); font-family:'Libre Baskerville',serif; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; padding:10px 24px; cursor:pointer;">
+          Proceed To Dispatch →
+        </button>
+      </div>
+    </div>
+
+    <script>
+      if (window.innerWidth < 860) {
+        document.getElementById('mobile-warning').style.display = 'block';
+      }
+    </script>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      ★ Established 2026 &nbsp;·&nbsp; Graphic Era Hill University, Dehradun &nbsp;·&nbsp; Cybersecurity & Development Edition ★
+    </div>
+
+    <!-- MASTHEAD -->
+    <header class="masthead">
+      <div class="masthead-meta">
+        <span>Vol. I, No. 1</span>
+        <span>TECHNICAL PORTFOLIO DISPATCH</span>
+        <span id="today-date">SUNDAY, AUGUST 9, 2026</span>
+      </div>
+      <div class="masthead-title">The Pathak Press</div>
+      <div class="masthead-sub">Independent Journal of Technology, Security &amp; Engineering</div>
+      <div class="masthead-edition">
+        <span>Dehradun · Uttarakhand</span>
+        <span>"Code is the new ink — and security, the press."</span>
+        <span>Edition: Open Archive</span>
+      </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+      <a href="#hero">Front Page</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Project Archive</a>
+      <a href="#skills">Technical Arsenal</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#learnings">PESE Journey</a>
+      <a href="#video-intro">Self Intro</a>
+      <a onclick="openContactModal()">Contact Bureau</a>
+    </nav>
+
+    <!-- BREAKING TICKER -->
+    <div class="ticker-wrap">
+      <div class="ticker-label">⚡ Dispatch</div>
+      <div class="ticker-content">
+        <span>Computer Science Student Masters C++, Java &amp; Python</span>
+        <span>Cybersecurity Specialist Ships Zero Trust SAML &amp; MFA Systems</span>
+        <span>Backend Engineer Optimizes Scalable FastAPI &amp; Node.js Services</span>
+        <span>Open for Software Engineering &amp; Cybersecurity Internships</span>
+        <span>Computer Science Student Masters C++, Java &amp; Python</span>
+        <span>Cybersecurity Specialist Ships Zero Trust SAML &amp; MFA Systems</span>
+        <span>Backend Engineer Optimizes Scalable FastAPI &amp; Node.js Services</span>
+        <span>Open for Software Engineering &amp; Cybersecurity Internships</span>
+      </div>
+    </div>
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="fade-in">
+      <div class="hero">
+        <div class="hero-content">
+          <span class="hero-kicker">Exclusive Profile</span>
+          <h1 class="hero-headline">
+            <em>Young Developer</em><br>
+            Champions Security<br>
+            In A Connected Era
+          </h1>
+          <p class="hero-deck">
+            A Computer Science undergraduate at Graphic Era Hill University issues a bold dispatch: the digital age demands builders who are also defenders.
+          </p>
+          <div class="hero-byline">
+            By <strong>The Editorial Board</strong> &nbsp;·&nbsp; Tech &amp; Innovation Desk &nbsp;·&nbsp; Dehradun Bureau
+          </div>
+          <div class="hero-body">
+            <p>In the rolling hills of Dehradun, Uttarakhand, a young technologist is quietly building a formidable repertoire — spanning languages, platforms, and the critical domain of cybersecurity. Armed with proficiency in C, C++, Java, Python, HTML, CSS, JavaScript, MongoDB, SQL, and PHP, this developer presents a rare breadth of competency at an early stage.</p>
+            <p>The philosophy is direct: "Cybersecurity is all about keeping our digital world safe." In an age where connectivity defines commerce, healthcare, and governance, that conviction is not idealism — it is infrastructure thinking. Data breaches, ransomware, and social engineering attacks cost the global economy trillions annually. Builders who understand both construction and protection are an asymmetric asset.</p>
+            <p>Graphic Era Hill University provides fertile ground — modern labs, industry-connected faculty, and an emphasis on applied learning over rote curriculum. The institution's track record of placing graduates in competitive technical roles lends credibility to the environment this developer is shaping their craft within.</p>
+            <p>The dispatch from Dehradun is clear: the next generation of tech leadership will not separate development from defense. This portfolio is Exhibit A.</p>
+          </div>
+
+          <div class="stat-strip">
+            <div class="stat-item">
+              <span class="stat-num">10+</span>
+              <span class="stat-label">Languages</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">3+</span>
+              <span class="stat-label">Years Study</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">250+</span>
+              <span class="stat-label">LeetCode</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">1</span>
+              <span class="stat-label">Mission</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-photo-panel">
+          <div class="photo-frame">
+            <div class="photo-frame-inner">
+              <img src="170775103441.jpg" alt="Manan Pathak" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;">
+            </div>
+          </div>
+          <p class="photo-caption">
+            The developer, photographed at Graphic Era Hill University, Dehradun campus atrium. <br>
+            <em>Photo: University Archives, 2024</em>
+          </p>
+          <div style="border-top:3px solid var(--ink); margin-top:20px; padding-top:16px;">
+            <p style="font-family:'Libre Baskerville',serif; font-size:0.62rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--wine); margin-bottom:6px;">About The Developer</p>
+            <p style="font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:900; line-height:1.1; margin-bottom:8px;">Manan Pathak</p>
+            <p style="font-family:'Libre Baskerville',serif; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gray); margin-bottom:12px;">B.Tech CSE · Cybersecurity · Graphic Era Hill University</p>
+            <p style="font-size:0.88rem; line-height:1.7; color:var(--gray); border-left:3px solid var(--wine); padding-left:12px; margin-bottom:14px;">
+              A cybersecurity-focused backend developer who builds systems that are not just functional — but defensible. Proficient in Python, Java, Flask, and MongoDB, with hands-on experience shipping production applications used by real users.
+            </p>
+            <div style="display:flex; flex-direction:column; gap:6px; margin-top:14px; padding-top:12px; border-top:1px solid var(--border-light);">
+              <p style="font-family:'Libre Baskerville',serif; font-size:0.72rem; color:var(--gray);">📍 Dehradun, Uttarakhand</p>
+              <p style="font-family:'Libre Baskerville',serif; font-size:0.72rem; color:var(--gray);">🎓 Graphic Era Hill University · CGPA 7.5</p>
+              <p style="font-family:'Libre Baskerville',serif; font-size:0.72rem; color:var(--gray);">🏆 250+ LeetCode Problems · Medium/Hard</p>
+              <p style="font-family:'Libre Baskerville',serif; font-size:0.72rem; color:var(--gray);">👥 Internshala Student Partner · Cohort 52</p>
+            </div>
+            <div style="display:flex; gap:14px; margin-top:14px; padding-top:12px; border-top:1px solid var(--border-light);">
+              <a href="https://github.com/MananPathak02" target="_blank" style="font-family:'Libre Baskerville',serif; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--wine); border-bottom:1px solid var(--wine); text-decoration:none; font-weight:700;">GitHub ↗</a>
+              <a href="https://linkedin.com/in/pathak-manan" target="_blank" style="font-family:'Libre Baskerville',serif; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--wine); border-bottom:1px solid var(--wine); text-decoration:none; font-weight:700;">LinkedIn ↗</a>
+              <a href="mailto:mananpathak0052@gmail.com" style="font-family:'Libre Baskerville',serif; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--wine); border-bottom:1px solid var(--wine); text-decoration:none; font-weight:700;">Email ↗</a>
+            </div>
+          </div>
+          <div class="pull-quote">
+            <p>"It's not just about computers — it's about protecting people, their privacy, and their trust."</p>
+            <cite>— The Developer, On Cybersecurity</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. INTERNSHIP EXPERIENCE SECTION -->
+    <div class="section-rule">
+      <div class="section-header"><h2>Internship &amp; Employment Record</h2></div>
+      <p class="section-intro">Archival timeline of professional backend engineering internships, AI development, and campus leadership roles.</p>
+    </div>
+
+    <section id="experience" class="fade-in">
+      <div class="timeline">
+
+        <!-- FlyRank AI -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Backend AI Engineering Intern</div>
+              <div class="timeline-company">FlyRank AI — Intelligent Search &amp; Retrieval Platform</div>
+            </div>
+            <div class="timeline-date">July 2026 · Present</div>
+          </div>
+          <div class="timeline-body">
+            <p>Architecting production backend microservices and data pipelines for intelligent AI search, document retrieval, and vector embeddings.</p>
+            <ul>
+              <li>Engineered high-throughput REST APIs using Python, FastAPI, and Pydantic, optimizing data query performance and response times.</li>
+              <li>Implemented Redis caching layers and PostgreSQL storage schemas to handle concurrent vector queries and user session management.</li>
+              <li>Built strict API authentication, token bucket rate-limiting, and error telemetry following Zero Trust security standards.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Cryptonic Area -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Cybersecurity Intern</div>
+              <div class="timeline-company">Cryptonic Area</div>
+            </div>
+            <div class="timeline-date">July 2026 · August 2026</div>
+          </div>
+
+          <div class="timeline-body">
+            <p>
+              Conducted practical web application security assessments and developed
+              security automation tooling for authorized security environments.
+            </p>
+
+            <ul>
+              <li>Performed web application security assessments in authorized lab environments, identifying SQL Injection vulnerabilities across Oracle, MySQL, and Microsoft SQL Server.</li>
+
+              <li>Conducted vulnerability validation, database fingerprinting, authentication security analysis, and documented remediation recommendations in professional assessment reports.</li>
+
+              <li>Engineered a modular Python-based reconnaissance framework automating WHOIS, DNS, HTTP headers, SSL/TLS certificate analysis, robots.txt, sitemap.xml, and security header enumeration.</li>
+
+              <li>Developed automated Markdown/HTML reporting with reusable reconnaissance modules and robust error handling for authorized security assessments.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Internshala Student Partner -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Internshala Student Partner</div>
+              <div class="timeline-company">Internshala — Cohort 52</div>
+            </div>
+            <div class="timeline-date">Aug 2024 · Present</div>
+          </div>
+          <div class="timeline-body">
+            <p>Leading campus technical skill development and career engagement initiatives at Graphic Era Hill University.</p>
+            <ul>
+              <li>Mentored 120+ computer science peers in core programming, resume optimization, and interview preparation strategies.</li>
+              <li>Organized competitive coding drives, technical webinars, and skill assessment workshops across university cohorts.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. PROJECT ARCHIVE SECTION -->
+    <div class="section-rule">
+      <div class="section-header"><h2>Project Archive</h2></div>
+      <p class="projects-intro">
+        A curated collection of enterprise cybersecurity platforms, backend systems, and web applications demonstrating secure architecture and production engineering.
+      </p>
+    </div>
+
+    <section id="projects" class="fade-in">
+
+      <!-- CATEGORY 1: CYBERSECURITY -->
+      <div class="project-category-header">
+        <h3>Cybersecurity Record</h3>
+        <p>Identity Provider · Zero Trust · Authentication · OSINT Automation</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- SAMLGuard 2.0 -->
+        <div class="project-card">
+          <span class="project-case-no">CASE FILE 01 · CYBERSECURITY</span>
+          <div class="project-visual">
+            <img src="image.png" alt="SAMLGuard 2.0" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;">
+            <div class="project-visual-badge">Featured</div>
+          </div>
+          <h3>SAMLGuard 2.0 — Enterprise SAML Identity Provider</h3>
+          <p>
+            Enterprise-grade SAML 2.0 Identity Provider implementing secure Single Sign-On (SSO), XML Digital Signature validation, Replay Attack mitigation, XML Signature Wrapping detection, JWT authentication, and Redis session auditing.
+          </p>
+          <div class="project-meta">
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">React</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">Redis</span>
+            <span class="project-tag">Docker</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/MananPathak02" target="_blank">GitHub ↗</a>
+            <a href="https://samlguard.vercel.app" class="demo-link">Live Demo ↗</a>
+          </div>
+        </div>
+
+        <!-- MFA Vaults -->
+        <div class="project-card">
+          <span class="project-case-no">CASE FILE 02 · CYBERSECURITY</span>
+          <div class="project-visual">
+            <img src="MFA1.png" alt="MFA Vaults" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;">
+            <div class="project-visual-badge">Zero Trust</div>
+          </div>
+          <h3>MFA Vaults — Zero Trust Authentication Platform</h3>
+          <p>
+            Zero Trust authentication platform delivering TOTP Multi-Factor Authentication, JWT Refresh Token rotation, QR code provisioning, Role-Based Access Control (RBAC), and detailed security audit logs.
+          </p>
+          <div class="project-meta">
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">JWT</span>
+            <span class="project-tag">Redis</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">Docker</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/MananPathak02" target="_blank">GitHub ↗</a>
+            <a href="https://mfa-vaults.vercel.app" target="_blank" class="demo-link">Live Demo ↗</a>
+          </div>
+        </div>
+
+        <!-- Web Recon Automation -->
+        <div class="project-card">
+          <span class="project-case-no">CASE FILE 03 · CYBERSECURITY</span>
+          <div class="project-visual">
+            <img src="Screenshot 2026-04-25 121917.png" alt="Web Recon Framework" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;">
+          </div>
+          <h3>Web Recon Automation Framework</h3>
+          <p>
+            Automated security reconnaissance framework executing WHOIS lookups, DNS enumeration, subdomain discovery, SSL certificate analysis, and tech stack fingerprinting to accelerate penetration testing.
+          </p>
+          <div class="project-meta">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Automation</span>
+            <span class="project-tag">Security</span>
+            <span class="project-tag">OSINT</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/MananPathak02" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CATEGORY SEPARATOR -->
+      <div class="category-divider">
+        <span>◆ SOFTWARE ENGINEERING &amp; BACKEND SYSTEMS ◆</span>
+      </div>
+
+      <!-- CATEGORY 2: SOFTWARE -->
+      <div class="project-category-header">
+        <h3>Software Engineering Record</h3>
+        <p>API Infrastructure · Real-Time Systems · AI Applications · Full-Stack Platforms</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- DevPulse -->
+        <div class="project-card">
+          <span class="project-case-no">CASE FILE 04 · SOFTWARE</span>
+          <div class="project-visual">
+            <img src="Screenshot 2026-04-25 125459.png" alt="DevPulse" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;">
+            <div class="project-visual-badge">Featured</div>
+          </div>
+          <h3>DevPulse — API Gateway &amp; Reverse Proxy</h3>
+          <p>
+            Enterprise API Gateway featuring Redis-backed token-bucket rate limiting, reverse proxy routing, analytics tracking, PostgreSQL metrics logging, and Dockerized microservice architecture.
+          </p>
+          <div class="project-meta">
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">Redis</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">API Gateway</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/MananPathak02" target="_blank">GitHub ↗</a>
+            <a href="#" class="demo-link">Live Demo ↗</a>
+          </div>
+        </div>
+
+        <!-- LiveDocs -->
+        <div class="project-card">
+          <span class="project-case-no">CASE FILE 05 · SOFTWARE</span>
+          <div class="project-visual">
+            <img src="Screenshot 2026-04-25 122002.png" alt="LiveDocs" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;">
+          </div>
+          <h3>LiveDocs — Real-Time Collaboration Platform</h3>
+          <p>
+            Real-time collaborative document editing platform leveraging WebSockets for instant state sync, Redis pub/sub for scaling concurrent users, and persistent document storage.
+          </p>
+          <div class="project-meta">
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">WebSockets</span>
+            <span class="project-tag">Redis</span>
+            <span class="project-tag">Docker</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/MananPathak02" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- SnapLink -->
+        <div class="project-card">
+          <span class="project-case-no">CASE FILE 06 · SOFTWARE</span>
+          <div class="project-visual">
+            <img src="Screenshot 2026-04-25 125437.png" alt="SnapLink" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;">
+          </div>
+          <h3>SnapLink — Secure URL Shortener Platform</h3>
+          <p>
+            Production-grade URL shortening platform secured with JWT authentication, bcrypt password hashing, click analytics, rate limiting, and MongoDB aggregation pipelines.
+          </p>
+          <div class="project-meta">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Flask</span>
+            <span class="project-tag">MongoDB</span>
+            <span class="project-tag">JWT</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/MananPathak02/SnapLink" target="_blank">GitHub ↗</a>
+            <a href="https://snaplink-backend-1vtc.onrender.com" target="_blank" class="demo-link">Live Demo ↗</a>
+          </div>
+        </div>
+
+        <!-- Aspira -->
+        <div class="project-card">
+          <span class="project-case-no">CASE FILE 07 · SOFTWARE</span>
+          <div class="project-visual">
+            <img src="Screenshot 2026-04-25 125459.png" alt="Aspira AI" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;">
+            <div class="project-visual-badge">AI Platform</div>
+          </div>
+          <h3>Aspira — AI Career Guidance Platform</h3>
+          <p>
+            AI-powered career guidance platform providing personalized career roadmaps, skill gap analysis, resume analysis, and secure authentication deployed live on cloud infrastructure.
+          </p>
+          <div class="project-meta">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Flask</span>
+            <span class="project-tag">MongoDB</span>
+            <span class="project-tag">AI / Gemini</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/MananPathak02/Aspira" target="_blank">GitHub ↗</a>
+            <a href="https://aspira-backend.onrender.com" target="_blank" class="demo-link">Live Demo ↗</a>
+          </div>
+        </div>
+
+        <!-- Blood Bank -->
+        <div class="project-card">
+          <span class="project-case-no">CASE FILE 08 · SOFTWARE</span>
+          <div class="project-visual">
+            <img src="Screenshot 2026-04-25 121812.png" alt="Blood Bank System" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;">
+          </div>
+          <h3>Blood Bank Inventory Management System</h3>
+          <p>
+            Secure hospital inventory management platform implementing role-based authentication, REST APIs, optimized blood unit allocation using the Knapsack Algorithm, and MongoDB tracking.
+          </p>
+          <div class="project-meta">
+            <span class="project-tag">Java</span>
+            <span class="project-tag">MongoDB</span>
+            <span class="project-tag">REST API</span>
+            <span class="project-tag">Knapsack Algo</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/MananPathak02/BloodBank" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- Hospital Management -->
+        <div class="project-card">
+          <span class="project-case-no">CASE FILE 09 · SOFTWARE</span>
+          <div class="project-visual">
+            <img src="Screenshot 2026-04-25 121937.png" alt="Hospital Management" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;">
+          </div>
+          <h3>Hospital Management System</h3>
+          <p>
+            Full-stack hospital management web application supporting patient registration, doctor schedules, appointment booking, authentication, and MySQL operations.
+          </p>
+          <div class="project-meta">
+            <span class="project-tag">PHP</span>
+            <span class="project-tag">MySQL</span>
+            <span class="project-tag">HTML5/CSS3</span>
+            <span class="project-tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/MananPathak02" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. TECHNICAL ARSENAL / SKILLS -->
+    <div class="section-rule">
+      <div class="section-header"><h2>Technical Arsenal</h2></div>
+      <p class="skills-intro">
+        Specification of languages, systems, databases, and security concepts applied in software engineering.
+      </p>
+    </div>
+
+    <section id="skills" class="fade-in">
+      <div class="skills-grid">
+        <div class="skill-column">
+          <h3>Systems &amp; Logic</h3>
+          <p>Foundational low-level and object-oriented languages for memory-safe design, algorithms, and systems architectures.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Python</span>
+          </div>
+        </div>
+        <div class="skill-column">
+          <h3>Web &amp; Frontend</h3>
+          <p>Client-side interfaces and dynamic web applications crafted for responsiveness, performance, and usability.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">PHP</span>
+          </div>
+        </div>
+        <div class="skill-column">
+          <h3>Data &amp; Security</h3>
+          <p>Backend data infrastructure, relational and NoSQL databases, RESTful APIs, and Zero Trust authentication models.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">SQL / MySQL</span>
+            <span class="skill-tag">FastAPI / Flask</span>
+            <span class="skill-tag">Cybersecurity</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. BADGES & CERTIFICATIONS -->
+    <div class="section-rule">
+      <div class="section-header"><h2>Badges &amp; Certifications</h2></div>
+      <p class="cert-intro">
+        Industry-recognized technical credentials and formal certifications in cloud computing, cybersecurity, and backend development.
+      </p>
+    </div>
+
+    <section id="certifications" class="fade-in">
+      <div class="cert-grid">
+
+        <!-- AWS -->
+        <div class="cert-card">
+          <span class="cert-status in-progress">In Progress</span>
+          <div class="cert-image-frame">
+            <span style="font-family:'Libre Baskerville',serif; font-size:0.65rem; color:var(--light-gray); text-transform:uppercase;">AWS Cloud Practitioner</span>
+          </div>
+          <h3>AWS Certified Cloud Practitioner</h3>
+          <div class="cert-issuer">Amazon Web Services</div>
+          <p class="cert-desc">Cloud architecture, core AWS services, security policies, IAM controls, and billing fundamentals.</p>
+          <div class="cert-footer">Target Completion: 2026</div>
+        </div>
+
+        <!-- Udemy Ethical Hacking -->
+        <div class="cert-card">
+          <span class="cert-status completed">Completed</span>
+          <div class="cert-image-frame">
+            <img src="Screenshot 2026-04-25 121917.png" alt="Ethical Hacking Udemy" style="max-height:80px; max-width:100%; object-fit:contain;">
+          </div>
+          <h3>Ethical Hacking — Complete Course</h3>
+          <div class="cert-issuer">Udemy</div>
+          <p class="cert-desc">Penetration testing, network scanning, vulnerability exploitation, and defensive security countermeasures.</p>
+          <div class="cert-footer">Issuer: Udemy</div>
+        </div>
+
+        <!-- Meta Backend -->
+        <div class="cert-card">
+          <span class="cert-status completed">Completed</span>
+          <div class="cert-image-frame">
+            <img src="Coursera X2M9RKM93U0B.pdf" alt="Meta Certificate" style="max-height:80px; max-width:100%; object-fit:contain;" onerror="this.parentElement.innerHTML='<span style=\'font-family:serif;font-size:0.65rem;color:var(--wine)\'>Meta / Coursera</span>'">
+          </div>
+          <h3>Mobile Backend Development</h3>
+          <div class="cert-issuer">Meta — Coursera</div>
+          <p class="cert-desc">Meta professional specialization in backend microservices, REST API design, and database integration.</p>
+          <div class="cert-footer">Issuer: Meta / Coursera</div>
+        </div>
+
+        <!-- Cisco Ethical Hacker Badge -->
+        <div class="cert-card">
+          <span class="cert-status completed">Completed</span>
+          <div class="cert-image-frame">
+            <img src="image (1).png" alt="Cisco Badge" style="max-height:80px; max-width:100%; object-fit:contain;">
+          </div>
+          <h3>Ethical Hacker Badge</h3>
+          <div class="cert-issuer">Cisco Networking Academy</div>
+          <p class="cert-desc">Recognized proficiency in ethical hacking methodologies, threat discovery, and network security testing.</p>
+          <div class="cert-footer">Issuer: Cisco</div>
+        </div>
+
+        <!-- Cisco Ethical Hacker Certificate -->
+        <div class="cert-card">
+          <span class="cert-status completed">Completed</span>
+          <div class="cert-image-frame">
+            <img src="Screenshot 2026-04-25 121239.png" alt="Cisco Certificate" style="max-height:80px; max-width:100%; object-fit:contain;">
+          </div>
+          <h3>Ethical Hacker Certificate</h3>
+          <div class="cert-issuer">Cisco Networking Academy</div>
+          <p class="cert-desc">Formal Cisco certificate validating hands-on competence in network vulnerability assessment and defense.</p>
+          <div class="cert-footer">Issuer: Cisco</div>
+        </div>
+
+        <!-- MongoDB GFG -->
+        <div class="cert-card">
+          <span class="cert-status completed">Completed</span>
+          <div class="cert-image-frame">
+            <img src="Screenshot 2026-04-25 121937.png" alt="MongoDB Certificate" style="max-height:80px; max-width:100%; object-fit:contain;">
+          </div>
+          <h3>MongoDB — Database Fundamentals</h3>
+          <div class="cert-issuer">GeeksForGeeks</div>
+          <p class="cert-desc">Validation of MongoDB schema design, aggregation pipelines, indexing, and Atlas cloud deployment.</p>
+          <div class="cert-footer">Issuer: GeeksForGeeks</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. VIDEO INTRO / CORRESPONDENT ON THE RECORD -->
+    <div class="section-rule">
+      <div class="section-header"><h2>Correspondent On The Record</h2></div>
+      <p class="section-intro">An exclusive video dispatch detailing technical background, engineering motivations, and career goals.</p>
+    </div>
+
+    <section id="video-intro" class="fade-in" style="max-width:1200px; margin:0 auto 40px; padding:0 40px;">
+      <div style="position:relative; background:var(--dark-paper); border:3px solid var(--ink); box-shadow:6px 6px 0 var(--bronze); overflow:hidden;">
+        <div style="background:var(--ink); padding:10px 24px; display:flex; justify-content:space-between; align-items:center; border-bottom:3px solid var(--wine);">
+          <span style="font-family:'Libre Baskerville',serif; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:#fff; font-weight:700;">Exclusive Video Dispatch</span>
+          <span style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold);">Manan Pathak · Introduction</span>
+        </div>
+
+        <div style="padding:28px; display:grid; grid-template-columns:1fr 440px 1fr; gap:24px; align-items:center;">
+          <div>
+            <h3 style="font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:900; line-height:1.2; margin-bottom:12px;">
+              Meet The <em style="color:var(--wine);">Developer</em> Behind The Code
+            </h3>
+            <p style="font-size:0.88rem; line-height:1.65; color:var(--gray); border-left:3px solid var(--wine); padding-left:10px; margin-bottom:14px;">
+              A candid presentation explaining the mission to combine robust backend development with defensive cybersecurity.
+            </p>
+            <div style="font-family:'Libre Baskerville',serif; font-size:0.72rem; color:var(--gray);">
+              📍 Dehradun, Uttarakhand<br>
+              🎓 B.Tech CSE · Class of 2027<br>
+              📧 mananpathak0052@gmail.com
+            </div>
+          </div>
+
+          <div>
+            <div id="video-container" style="position:relative; width:100%; border:3px solid var(--ink); box-shadow:4px 4px 0 var(--wine); cursor:pointer; background:var(--ink);" onclick="playVideo()">
+              <img id="video-cover" src="170775103441.jpg" alt="Click to play introduction" style="width:100%; aspect-ratio:16/9; object-fit:cover; object-position:top; display:block; filter:brightness(0.7) contrast(1.1);">
+              <div id="play-overlay" style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;">
+                <div style="width:58px; height:58px; border-radius:50%; background:var(--wine); border:2px solid #fff; display:flex; align-items:center; justify-content:center;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><polygon points="8,5 20,12 8,19" fill="white"/></svg>
+                </div>
+                <span style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:#fff; background:var(--ink); padding:4px 12px; border:1px solid var(--gold);">Play Introduction</span>
+              </div>
+              <video id="intro-video" style="position:absolute; inset:0; width:100%; height:100%; display:none; object-fit:cover;" controls>
+                <source src="Manan_Coalition_Intro.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <div>
+            <h4 style="font-family:'Libre Baskerville',serif; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--wine); margin-bottom:8px;">Technical Field Kit</h4>
+            <p style="font-size:0.84rem; line-height:1.6; color:var(--gray); margin-bottom:12px;">
+              Core stack includes Python, FastAPI, Flask, Node.js, MongoDB, PostgreSQL, Redis, Docker, and Linux CLI tools.
+            </p>
+            <a onclick="openContactModal()" class="cta-btn" style="padding:8px 14px; font-size:0.62rem;">Get In Touch →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. ABOUT & CONTACT BUREAU -->
+    <div class="section-rule">
+      <div class="section-header"><h2>Further Reading &amp; Contact</h2></div>
+    </div>
+
+    <section id="about" class="bottom-section fade-in">
+      <div class="about-col">
+        <h2>About The Reporter</h2>
+        <p>A Computer Science undergraduate at <strong>Graphic Era Hill University</strong>, Dehradun — focused on building software that is not merely functional but <em>defensible</em>.</p>
+        <p>Every application is an attack surface, and every API transaction represents a trust contract. Proficient in 10+ languages and platforms with specific focus on backend engineering, Zero Trust authentication, and cloud infrastructure.</p>
+        <p style="font-style:italic; color:var(--gray); border-left:3px solid var(--wine); padding-left:12px; margin:16px 0;">
+          "Thank you for visiting this portfolio. Every connection made here is a step toward a more secure, well-built digital world."
+        </p>
+        <a class="cta-btn" onclick="openContactModal()">Send a Dispatch →</a>
+        <a class="cta-btn" href="Manan_Tower (1).pdf" download target="_blank" style="margin-left:10px; background:var(--wine); border-color:var(--wine);">Download Resume ↓</a>
+      </div>
+
+      <div id="contact" class="contact-col">
+        <h2>Contact The Bureau</h2>
+        <div class="contact-item">
+          <span class="contact-label">Institution</span>
+          <span class="contact-value">Graphic Era Hill University, Dehradun</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Discipline</span>
+          <span class="contact-value">Computer Science — Cybersecurity &amp; Backend Engineering</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">mananpathak0052@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/MananPathak02</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/pathak-manan</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Status</span>
+          <span class="contact-value" style="color:var(--wine); font-weight:700;">● Open for Internship Opportunities</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FOOTER COLOPHON -->
+    <footer>
+      <p><strong>THE PATHAK PRESS</strong> &nbsp;·&nbsp; TECHNICAL PORTFOLIO DISPATCH &nbsp;·&nbsp; © 2026 MANAN PATHAK</p>
+      <p style="margin-top:6px; color:var(--light-gray); font-size:0.68rem;">Graphic Era Hill University · Dehradun, Uttarakhand · "Code is the new ink — and security, the press."</p>
+    </footer>
+
+  </div><!-- END .page-sheet-content -->
+
+</div><!-- END .page-sheet -->
+
+<!-- CONTACT MODAL -->
+<div id="contact-modal">
+  <div id="contact-modal-box">
+    <div style="background:var(--ink); padding:12px 24px; display:flex; justify-content:space-between; align-items:center; border-bottom:3px solid var(--wine);">
+      <span style="font-family:'Libre Baskerville',serif; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:#fff; font-weight:700;">Dispatch To The Bureau</span>
+      <button onclick="closeContactModal()" style="background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer; line-height:1;">×</button>
+    </div>
+    <div style="padding:28px;">
+      <h2 style="font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:900; margin-bottom:6px;">Get In Touch</h2>
+      <div style="width:40px; height:3px; background:var(--wine); margin-bottom:20px;"></div>
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:center; gap:14px; padding:12px 16px; border:1px solid var(--ink); background:var(--dark-paper);">
+          <span style="font-size:1.2rem;">📧</span>
+          <div>
+            <p style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--wine); margin-bottom:2px; font-weight:700;">Direct Email</p>
+            <a href="mailto:mananpathak0052@gmail.com" style="font-size:0.88rem; color:var(--ink); text-decoration:none; font-weight:700; border-bottom:1px solid var(--ink);">mananpathak0052@gmail.com</a>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:14px; padding:12px 16px; border:1px solid var(--ink); background:var(--dark-paper);">
+          <span style="font-size:1.2rem;">💼</span>
+          <div>
+            <p style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--wine); margin-bottom:2px; font-weight:700;">LinkedIn</p>
+            <a href="https://linkedin.com/in/pathak-manan" target="_blank" style="font-size:0.88rem; color:var(--ink); text-decoration:none; font-weight:700; border-bottom:1px solid var(--ink);">linkedin.com/in/pathak-manan</a>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:14px; padding:12px 16px; border:1px solid var(--ink); background:var(--dark-paper);">
+          <span style="font-size:1.2rem;">🐙</span>
+          <div>
+            <p style="font-family:'Libre Baskerville',serif; font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--wine); margin-bottom:2px; font-weight:700;">GitHub</p>
+            <a href="https://github.com/MananPathak02" target="_blank" style="font-size:0.88rem; color:var(--ink); text-decoration:none; font-weight:700; border-bottom:1px solid var(--ink);">github.com/MananPathak02</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Date in masthead
+  const d = new Date();
+  const opts = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
+  document.getElementById('today-date').textContent = d.toLocaleDateString('en-US', opts).toUpperCase();
+
+  function playVideo() {
+    const video = document.getElementById("intro-video");
+    const cover = document.getElementById("video-cover");
+    const overlay = document.getElementById("play-overlay");
+    cover.style.display = "none";
+    overlay.style.display = "none";
+    video.style.display = "block";
+    video.play();
+  }
+
+  function openContactModal() {
+    document.getElementById('contact-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeContactModal() {
+    document.getElementById('contact-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('contact-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeContactModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeContactModal();
+  });
+</script>
+
+</body>
+</html>

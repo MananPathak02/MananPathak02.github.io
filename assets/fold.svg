@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <linearGradient id="foldShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#171411" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#171411" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#171411" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="foldHighlight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ece2cf" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <!-- Shadow cast underneath the flap -->
+  <polygon points="0,0 60,0 0,60" fill="url(#foldShadow)"/>
+  <!-- Folded paper flap -->
+  <polygon points="60,0 60,60 0,60" fill="url(#foldHighlight)" stroke="#a27a3f" stroke-opacity="0.3" stroke-width="0.75"/>
+</svg>

@@ -1,0 +1,1138 @@
+/* ==========================================================================
+   THE PATHAK PRESS — 1920s LUXURY ARCHIVAL EDITORIAL DESIGN SYSTEM
+   (HIGH-PERFORMANCE GPU-ACCELERATED EDITION FOR BUTTERY SMOOTH SCROLLING)
+   ========================================================================== */
+
+/* ── PHASE A: CORE FOUNDATION & VARIABLES ── */
+:root {
+  --ink: #171411;
+  --paper: #f8f3e7;
+  --dark-paper: #ece2cf;
+  --cream: #f4edd9;
+  --wine: #8d2d2c;
+  --dark-wine: #68201f;
+  --gold: #a27a3f;
+  --bronze: #7b5d37;
+  --gray: #5f5850;
+  --light-gray: #888278;
+  --rule: #171411;
+  --border-light: rgba(23, 20, 17, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Warm 1920s mahogany library desk backdrop — Pure CSS gradient for 120fps scrolling */
+  background-color: #1a1512;
+  background-image: radial-gradient(circle at 50% 25%, #2a221c 0%, #140f0c 100%);
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+body {
+  background-color: transparent;
+  color: var(--ink);
+  font-family: 'Source Serif 4', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding: 28px 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Page sheet container: centered broadsheet newspaper on desktop */
+.page-sheet {
+  max-width: 1320px;
+  margin: 0 auto;
+  background-color: var(--paper);
+  background-image: url('assets/paper.svg');
+  background-size: 200px 200px;
+  box-shadow: 
+    0 18px 50px rgba(0, 0, 0, 0.55), 
+    0 2px 10px rgba(0, 0, 0, 0.35),
+    0 0 0 2px var(--gold),
+    0 0 0 5px var(--ink);
+  position: relative;
+  border-radius: 2px;
+  padding: 16px; /* Archival paper border margin */
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Inner archival double border frame enclosing content */
+.page-sheet-content {
+  border: 3px double var(--ink);
+  outline: 1px solid var(--gold);
+  outline-offset: -6px;
+  background: var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Faint Archival Watermark backdrop inside the sheet */
+.page-sheet-content::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/watermark.svg');
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 500px 330px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.35;
+  transform: translateZ(0);
+}
+
+/* Engraved Archival Corner Brackets on the Page Sheet */
+.corner-bracket {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.corner-bracket-tl {
+  top: 22px;
+  left: 22px;
+  border-top: 2px solid var(--gold);
+  border-left: 2px solid var(--gold);
+}
+
+.corner-bracket-tr {
+  top: 22px;
+  right: 22px;
+  border-top: 2px solid var(--gold);
+  border-right: 2px solid var(--gold);
+}
+
+.corner-bracket-bl {
+  bottom: 22px;
+  left: 22px;
+  border-bottom: 2px solid var(--gold);
+  border-left: 2px solid var(--gold);
+}
+
+.corner-bracket-br {
+  bottom: 22px;
+  right: 22px;
+  border-bottom: 2px solid var(--gold);
+  border-right: 2px solid var(--gold);
+}
+
+/* Top bar */
+.top-bar {
+  background: var(--ink);
+  color: var(--paper);
+  text-align: center;
+  padding: 8px 20px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--gold);
+  position: relative;
+  z-index: 20;
+}
+
+/* ── PHASE B: MASTHEAD ── */
+.masthead {
+  border-bottom: 3px double var(--ink);
+  padding: 28px 48px 20px;
+  background: var(--paper);
+  position: relative;
+  z-index: 20;
+}
+
+/* Folded paper corner on top right */
+.masthead::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55px;
+  height: 55px;
+  background-image: url('assets/fold.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 25;
+}
+
+.masthead-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bronze);
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.masthead-title {
+  text-align: center;
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: clamp(3.2rem, 8.5vw, 6.8rem);
+  line-height: 0.95;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin: 8px 0;
+  text-shadow: 1px 1px 0px rgba(162, 122, 63, 0.2);
+}
+
+.masthead-sub {
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--wine);
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.masthead-edition {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--ink);
+  padding-top: 10px;
+  margin-top: 16px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+}
+
+/* ── PHASE C: NAVIGATION & TICKER ── */
+nav {
+  background: var(--ink);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  position: relative;
+  z-index: 20;
+}
+
+nav a {
+  color: var(--paper);
+  text-decoration: none;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-right: 1px solid rgba(248, 243, 231, 0.15);
+  transition: background 0.15s ease, color 0.15s ease;
+  cursor: pointer;
+}
+
+nav a:first-child {
+  border-left: 1px solid rgba(248, 243, 231, 0.15);
+}
+
+nav a:hover {
+  background: var(--wine);
+  color: #ffffff;
+}
+
+/* Breaking Ticker - GPU Composited */
+.ticker-wrap {
+  background: var(--dark-wine);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 38px;
+  border-bottom: 2px solid var(--ink);
+  position: relative;
+  z-index: 20;
+}
+
+.ticker-label {
+  background: var(--ink);
+  color: var(--gold);
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0 18px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  border-right: 2px solid var(--gold);
+  flex-shrink: 0;
+  z-index:1;
+}
+
+.ticker-content {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker 45s linear infinite;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+.ticker-content span {
+  padding: 0 28px;
+}
+
+.ticker-content span::after {
+  content: "◆";
+  margin-left: 28px;
+  color: var(--gold);
+}
+
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* ── EDITORIAL SECTION HEADERS & RULES ── */
+.section-rule {
+  max-width: 1240px;
+  margin: 40px auto 24px;
+  padding: 0 40px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.section-header {
+  border-top: 3px double var(--ink);
+  border-bottom: 3px double var(--ink);
+  padding: 12px 0;
+  margin-bottom: 12px;
+  background: var(--paper);
+}
+
+.section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.section-intro, .skills-intro, .projects-intro, .cert-intro {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--gray);
+  max-width: 800px;
+  margin: 8px auto 0;
+  line-height: 1.6;
+}
+
+/* Horizontal category divider flourish */
+.category-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 36px 0 28px;
+  width: 100%;
+}
+
+.category-divider::before, .category-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--ink);
+  border-bottom: 1px solid var(--gold);
+}
+
+.category-divider span {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.9rem;
+  color: var(--wine);
+}
+
+/* ── PERFORMANCE RENDERING HINTS FOR SECTIONS ── */
+#experience, #projects, #skills, #certifications, #video-intro, #learnings, .bottom-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 800px;
+}
+
+/* ── PHASE D: HERO SECTION ── */
+#hero {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 32px 40px 40px;
+  border-bottom: 2px solid var(--ink);
+  position: relative;
+  z-index: 10;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.hero-kicker {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--wine);
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: 1px solid var(--wine);
+  margin-bottom: 12px;
+}
+
+.hero-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.12;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+
+.hero-headline em {
+  font-style: italic;
+  color: var(--wine);
+}
+
+.hero-deck {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--gray);
+  border-left: 3px solid var(--wine);
+  padding-left: 14px;
+  margin-bottom: 18px;
+}
+
+.hero-byline {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bronze);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  padding: 8px 0;
+  margin-bottom: 20px;
+}
+
+.hero-body {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--ink);
+  text-align: justify;
+}
+
+.hero-body p {
+  margin-bottom: 14px;
+}
+
+/* Large drop cap */
+.hero-body p:first-of-type::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.6rem;
+  float: left;
+  line-height: 0.8;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 4px;
+  color: var(--wine);
+  font-weight: 900;
+}
+
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 16px 0;
+  margin-top: 28px;
+  background: var(--dark-paper);
+}
+
+.stat-item {
+  text-align: center;
+  border-right: 1px solid var(--border-light);
+  padding: 0 8px;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--wine);
+  display: block;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+/* Hero Photo Panel */
+.hero-photo-panel {
+  background: var(--dark-paper);
+  border: 2px solid var(--ink);
+  padding: 22px;
+  box-shadow: 4px 4px 0px var(--bronze);
+  position: relative;
+}
+
+.photo-frame {
+  border: 3px double var(--ink);
+  padding: 6px;
+  background: var(--paper);
+  margin-bottom: 14px;
+}
+
+.photo-frame-inner {
+  width: 100%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border: 1px solid var(--ink);
+}
+
+.photo-caption {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--gray);
+  border-top: 1px solid var(--ink);
+  padding-top: 10px;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+.pull-quote {
+  background: var(--dark-paper);
+  border-left: 4px solid var(--wine);
+  border-right: 1px solid var(--gold);
+  padding: 18px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--ink);
+  margin-top: 24px;
+  box-shadow: 3px 3px 0px var(--bronze);
+  line-height: 1.5;
+}
+
+.pull-quote cite {
+  display: block;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.68rem;
+  font-style: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--wine);
+  margin-top: 8px;
+}
+
+/* ── PHASE E: EXPERIENCE SECTION ── */
+#experience {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px 40px;
+  border-bottom: 2px solid var(--ink);
+  position: relative;
+  z-index: 10;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 24px;
+}
+
+.timeline-item {
+  background: var(--dark-paper);
+  border: 2px solid var(--ink);
+  padding: 24px 28px;
+  box-shadow: 3px 3px 0px var(--bronze);
+  position: relative;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.timeline-role {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--ink);
+}
+
+.timeline-company {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--wine);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.timeline-date {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 4px 12px;
+  border: 1px solid var(--gold);
+}
+
+.timeline-body {
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: var(--gray);
+}
+
+.timeline-body ul {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.timeline-body ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 6px;
+}
+
+.timeline-body ul li::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  color: var(--wine);
+  font-size: 0.6rem;
+  top: 4px;
+}
+
+/* ── PHASE F: PROJECTS ARCHIVE ── */
+#projects {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px 40px;
+  border-bottom: 2px solid var(--ink);
+  position: relative;
+  z-index: 10;
+}
+
+.project-category-header {
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 8px;
+  margin: 32px 0 20px;
+}
+
+.project-category-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.project-category-header p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--wine);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(340px, 1fr) );
+  gap: 28px;
+}
+
+.project-card {
+  background: var(--dark-paper);
+  border: 2px solid var(--ink);
+  padding: 20px;
+  box-shadow: 3px 3px 0px var(--bronze);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.project-case-no {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--wine);
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.project-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--gray);
+  flex-grow: 1;
+  margin-bottom: 14px;
+}
+
+.project-visual {
+  border: 2px solid var(--ink);
+  margin-bottom: 14px;
+  position: relative;
+  aspect-ratio: 16/9;
+  background: var(--paper);
+  overflow: hidden;
+}
+
+.project-visual-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--wine);
+  color: #fff;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1px solid var(--ink);
+  z-index: 5;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 10px;
+}
+
+.project-tag {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 3px 8px;
+}
+
+.project-links {
+  display: flex;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid var(--ink);
+}
+
+.project-links a {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+  font-weight: 700;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.project-links a.demo-link {
+  color: var(--wine);
+  border-bottom-color: var(--wine);
+}
+
+.project-links a:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* ── PHASE G: SKILLS & TECHNICAL ARSENAL ── */
+#skills {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px 40px;
+  border-bottom: 2px solid var(--ink);
+  position: relative;
+  z-index: 10;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.skill-column {
+  background: var(--dark-paper);
+  border: 2px solid var(--ink);
+  padding: 22px;
+  box-shadow: 3px 3px 0px var(--bronze);
+}
+
+.skill-column h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+.skill-column p {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 4px 10px;
+  font-weight: 700;
+}
+
+/* ── PHASE H: CERTIFICATIONS ── */
+#certifications {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px 40px;
+  border-bottom: 2px solid var(--ink);
+  position: relative;
+  z-index: 10;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.cert-card {
+  background: var(--dark-paper);
+  border: 2px solid var(--ink);
+  padding: 20px;
+  box-shadow: 3px 3px 0px var(--bronze);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.cert-status {
+  display: inline-block;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  margin-bottom: 12px;
+  border: 1px solid var(--ink);
+  width: fit-content;
+}
+
+.cert-status.completed {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.cert-status.in-progress {
+  background: var(--wine);
+  color: #fff;
+}
+
+.cert-image-frame {
+  height: 90px;
+  background: var(--paper);
+  border: 1px dashed var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.cert-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.cert-issuer {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--wine);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.cert-desc {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: var(--gray);
+  flex-grow: 1;
+}
+
+.cert-footer {
+  border-top: 1px solid var(--border-light);
+  margin-top: 14px;
+  padding-top: 8px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--light-gray);
+}
+
+/* ── PHASE I: ABOUT & CONTACT BUREAU ── */
+.bottom-section {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.about-col h2, .contact-col h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.about-col p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.cta-btn {
+  display: inline-block;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 2px solid var(--ink);
+  transition: background 0.15s ease, color 0.15s ease;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.cta-btn:hover {
+  background: var(--wine);
+  border-color: var(--wine);
+  color: #fff;
+}
+
+.contact-col {
+  background: var(--dark-paper);
+  border: 2px solid var(--ink);
+  padding: 24px;
+  box-shadow: 3px 3px 0px var(--bronze);
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border-light);
+  padding: 10px 0;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-label {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--wine);
+  font-weight: 700;
+}
+
+.contact-value {
+  font-size: 0.9rem;
+  color: var(--ink);
+  margin-top: 2px;
+}
+
+/* ── PHASE J: FOOTER COLOPHON ── */
+footer {
+  background: var(--ink);
+  color: var(--paper);
+  text-align: center;
+  padding: 24px 40px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-top: 3px double var(--gold);
+  position: relative;
+  z-index: 20;
+}
+
+footer p strong {
+  color: var(--gold);
+}
+
+/* Modal styling */
+#contact-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(23, 20, 17, 0.85);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#contact-modal.open {
+  display: flex;
+}
+
+#contact-modal-box {
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  max-width: 540px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+/* ── PHASE K: RESPONSIVE REFINEMENT ── */
+@media (max-width: 992px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .skills-grid, .cert-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bottom-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+  .page-sheet {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+  .page-sheet-content {
+    border: none;
+    outline: none;
+  }
+  .corner-bracket {
+    display: none;
+  }
+  .masthead {
+    padding: 20px;
+  }
+  .masthead-meta, .masthead-edition {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+  .skills-grid, .cert-grid, .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  #hero, #experience, #projects, #skills, #certifications, .bottom-section {
+    padding: 20px;
+  }
+  nav a {
+    padding: 10px 14px;
+    font-size: 0.65rem;
+  }
+}
